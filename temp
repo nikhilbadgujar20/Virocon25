@@ -1,0 +1,497 @@
+<body className="body-wrapper">
+
+
+    <section className="section schedule">
+        <div className="container">
+            <div className="row">
+                <div className="col-12">
+                    <div className="section-title">
+                        <h3>About</h3>
+                    </div>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-12">
+                    <!-- <div className="schedule-tab">
+					<ul className="nav nav-pills text-center">
+					  <li className="nav-item">
+					    <a className="nav-link active" href="#drde" data-toggle="pill">
+					    	NIV
+					    </a>
+					  </li>
+					  <li className="nav-item">
+					    <a className="nav-link" href="#ivs" data-toggle="pill">
+							IVS
+					    </a>
+					  </li>
+					  <li className="nav-item">
+					    <a className="nav-link" href="#reach" data-toggle="pill">
+							How to reach?
+					    </a>
+					  </li>
+					  
+					  <li className="nav-item">
+					    <a className="nav-link" href="#places" data-toggle="pill">
+							Places to see
+					    </a>
+					  </li>
+					</ul>
+				</div> -->
+                    <div className="schedule-contents">
+                        <div className="tab-content" id="pills-tabContent">
+                            <div className="tab-pane fade show active schedule-item" id="drde">
+                                <!-- Headings -->
+                                <div className="container">
+                                    <div className="row">
+                                        <!-- <div className="col-lg-4 col-md-6 align-self-center">
+									<div className="image-block bg-about">
+										<img className="img-fluid" src="images/drde2.jpg" alt="">
+									</div>
+								</div> -->
+                                        <div className="col-lg-12 col-md-6 align-self-center">
+                                            <div className="content-block">
+                                                <!-- <h2>DRDE</h2> -->
+                                                <div className="image-block bg-about">
+                                                    <img className="img-fluid" src="images/Niv1.jpg" alt="">
+                                                </div>
+                                                <div className="description-one mt-3">
+                                                    <p>
+                                                        Theentific Advisory Committee (SAC) consisting of eminent
+                                                        scientists.
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-lg-12 col-md-6 align-self-center">
+                                            <div className="content-block">
+                                                <!-- <h2>DRDE</h2> -->
+                                                <div className="description-one">
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="tab-pane fade schedule-item" id="ivs">
+                                <!-- Headings -->
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col-lg-4 col-md-6 align-self-center">
+                                            <div className="image-block bg-about">
+                                                <img className="img-fluid" src="images/IVS.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-8 col-md-6 align-self-center">
+                                            <div className="content-block">
+                                                <!-- <h2>DRDE</h2> -->
+                                                <div className="description-one">
+                                                    <p>
+                                                        The cross-boundary viral epidemics.
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row mt-5">
+                                        <div className="col-12">
+                                            <h4 className=" mb-4">IVS Executive Committee</h4>
+                                            <ul className="list-group mb-5">
+                                                <li className="list-group-item"><strong>Prof. R. K. Ratho</strong> -
+                                                    President</li>
+                                                <li className="list-group-item"><strong>Prof. R. Selvarajan</strong> - Vice
+                                                    President (Plant Virology)</li>
+                                                <li className="list-group-item"><strong>Dr. A. K. Bagga</strong> - Vice
+                                                    President (Medical Virology)</li>
+                                                <li className="list-group-item"><strong>Prof. (Dr.) Indrani
+                                                        Karunasagar</strong> - Vice President (Veterinary Virology)</li>
+                                                <li className="list-group-item"><strong>Prof. (Dr.) Yashpal S.
+                                                        Malik</strong> - Secretary General</li>
+                                                <li className="list-group-item"><strong>Dr. Celia Chalam Vasimalla</strong>
+                                                    - Secretary (Plant Virology)</li>
+                                                <li className="list-group-item"><strong>Prof. (Dr.) Shailendra K.
+                                                        Saxena</strong> - Secretary (Medical Virology)</li>
+                                                <li className="list-group-item"><strong>Dr. Baldev R. Gulati</strong> -
+                                                    Secretary (Veterinary Virology)</li>
+                                                <li className="list-group-item"><strong>Dr. Susheel Kumar Sharma</strong> -
+                                                    Secretary (Resources)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- <div className="row">
+								<div className="col-lg-12 col-md-6 align-self-center">
+									<div className="content-block">
+										<div className="description-one">
+											<h3 className="mt-3 text-center">IVS EXECUTIVE COMMITTEE</h3>
+											<div className="text-center">
+												<ul className="bold">
+													<li>Prof. R. K. Ratho, President</li>
+													<li>Prof. R. Selvarajan, Vice President (Plant Virology)</li>
+													<li>Dr. A. K. Bagga, Vice President (Medical Virology)</li>
+													<li>Prof. (Dr.) Indrani Karunasagar, Vice President (Veterinary Virology)</li>
+													<li>Prof. (Dr.) Yashpal S. Malik, Secretary General</li>
+													<li>Dr. Celia Chalam Vasimalla, Secretary (Plant Virology)</li>
+													<li>Prof. (Dr.) Shailendra K. Saxena, Secretary (Medical Virology)</li>
+													<li>Dr. Baldev R. Gulati, Secretary (Veterinary Virology)</li>
+													<li>Dr. Susheel Kumar Sharma, Secretary (Resources)</li>
+												</ul>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div> -->
+                                </div>
+                            </div>
+                            <div className="tab-pane fade schedule-item" id="reach">
+                                <!-- Headings -->
+                                <div className="container mt-5">
+                                    <!-- How to Reach Section -->
+                                    <div className="section-header">
+                                        <!-- <h2>How to Reach</h2> -->
+                                        <div className="row">
+                                            <div className="col-md-4">
+                                                <div className="reach-method">
+                                                    <i className="fas fa-plane-departure icon"></i>
+                                                    <div>
+                                                        <h4>By Air</h4>
+                                                        <p>Direct hi is 335 kilometers away from Gwalior.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-4">
+                                                <div className="reach-method">
+                                                    <i className="fas fa-train icon"></i>
+                                                    <div>
+                                                        <h4>By Rail</h4>
+                                                        <p>Gwaliwalior and operate daily.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-4">
+                                                <div className="reach-method">
+                                                    <i className="fas fa-bus icon"></i>
+                                                    <div>
+                                                        <h4>By Road</h4>
+                                                        <p>Gwalior is well connected through roads. Distance to Delhi is
+                                                            323 e Agra is only 125 km away.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div className="container">
+							<div className="row">
+								<div className="col-lg-4 col-md-6 align-self-center">
+									<div className="image-block bg-about">
+										<img className="img-fluid" src="images/speakers/featured-speaker.jpg" alt="">
+									</div>
+								</div>
+								<div className="col-lg-8 col-md-6 align-self-center">
+									<div className="content-block">
+										<div className="description-one">
+											<p>
+												The 21st century has witnessed the emergence and re-emergence of viral agents namely, Dengue, Chikungunya, Swine flu, Nipah, CCHF, KFD and SARS-CoV-2. The recent COVID pandemic has also accentuated the global vulnerability of such agents, which intrigued the scientific community for gearing up the resources for an effective combat against these threats. This pandemic has led to increased interest of global scientific community to the world of viruses.
+											</p>
+											<p>
+												It is a great pleasure for us in extending a warm and cordial invitation on behalf of the Organizing Committee, to the eminent as well as budding Virologists in the country and abroad to attend <b>“VIROCON-2025: Emerging Viruses: Pandemic & Biosecurity Perspectives”</b>. This important conference is being organized by DRDO- Defence Research & Development Establishment (DRDE), Gwalior, India in association with Indian Virological Society (IVS) during 11-13 November, 2024. DRDO-DRDE, a prominent laboratory of the Defence R&D Organisation (DRDO), Ministry of Defence, Govt of India, has been working relentlessly since past several decades in empowering the nation in the realm of Chem-Bio defence. IVS is a unique scientific society that foster research and development in all fi elds of Virology including Medical, Veterinary, Plant and Aquatic Virology. IVS is a member of International Union of Microbiological Societies (IUMS) and maintains close partnership with World Society for Virology (WSV) to address issues related to trans-boundary viral infections.
+											</p>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div className="row">
+								<div className="col-lg-12 col-md-6 align-self-center">
+									<div className="content-block">
+										<div className="description-one">
+											<p>
+												We are confi dent that the conference will provide an excellent platform to the participants for productive scientific deliberations, fruitful interactions and collaboration for solutions to contain the viral epidemics that threatening human, animal, plant, aquatic and environmental health. The major highlights of the conference would be the joint symposium involving all these specialties, plenary lectures, key note talks and invited guest lectures by world renowned scientists along with oral and poster presentations. Your participation in the conference would be a great source of inspiration for the young researchers and the fellow participants.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+                            </div>
+                            <div className="tab-pane fade schedule-item" id="places">
+                                <!-- Headings -->
+                                <div className="container">
+                                    <!-- About Gwalior Section -->
+                                    <section id="about-gwalior" className="my-5">
+                                        <h2 className="section-header">About Gwalior</h2>
+                                        <div className="row">
+                                            <div className="col-md-6">
+                                                <p>Gwalior, a city ing legacy.</p>
+                                            </div>
+                                            <div className="col-md-6">
+                                                <img src="images/places/gwalior.jpg" alt="Gwalior" className="img-fluid">
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- Places to Visit in Gwalior Section -->
+                                    <section id="places-to-visit" className="my-5">
+                                        <h2 className="section-header">Places to Visit in Gwalior</h2>
+                                        <div className="row visit">
+                                            <!-- Gwalior Fort -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/gwalior fort.jpg" className="card-img-top"
+                                                        alt="Gwalior Fort">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Gwalior Fort</h5>
+                                                        <p className="card-text">The most important landmark in the city,
+                                                            Gwalior continue to remain, attesting to its reputation as one
+                                                            of India's most impregnable forts.
+                                                        </p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Gopachal Parvat -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Gopachal Parvat.jpg" className="card-img-top"
+                                                        alt="Gopachal Parvat">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Gopachal Parvat</h5>
+                                                        <p className="card-text">Gopachal Parvat, a well-known series of
+                                                            rock- it is one of the most significant locations in
+                                                            Gwalior.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Sas Bahu Temple -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Sas Bahu Temple.jpg" className="card-img-top"
+                                                        alt="Sas Bahu Temple">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Sas Bahu Temple</h5>
+                                                        <p className="card-text">The Sas-Bahu Temple, which is housed inside
+                                                            the Gwalior Fort, con this iconic temple.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Teli ka Mandir -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Teli ka Mandir.jpg" className="card-img-top"
+                                                        alt="Teli ka Mandir">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Teli ka Mandir</h5>
+                                                        <p className="card-text">Teli ka Mandir, a historic religious temple
+                                                            renowned for its Dravies as well as Lord Vishnu in the guise of
+                                                            his mount, "Garuda."</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Jai Vilas Palace -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Jai Vilas Palace.jpg" className="card-img-top"
+                                                        alt="Jai Vilas Palace">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Jai Vilas Palace</h5>
+                                                        <p className="card-text">The from France and
+                                                            Italy.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Rani Laxmi Bai Samadhi Sthal -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Rani Laxmi Bai.jpg" className="card-img-top"
+                                                        alt="Rani Laxmi Bai Samadhi Sthal">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Rani Laxmi Bai Samadhi Sthal</h5>
+                                                        <p className="card-text">Built in honour of the warrior queen of
+                                                            Jhansi, Rani Lakshmi the Indian
+                                                            rebellion of 1857.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Sun Temple -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Sun Temple.jpg" className="card-img-top"
+                                                        alt="Sun Temple">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Sun Temple</h5>
+                                                        <p className="card-text">Gwalior's Sun Temple was constructed by the
+                                                            famous industrialist and
+                                                            philanthropist G.D. ctural prowess and
+                                                            traditional Hindu art.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Sarod Ghar -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Sarod Ghar.jpg" className="card-img-top"
+                                                        alt="Sarod Ghar">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Sarod Ghar</h5>
+                                                        <p className="card-text">The Sarod Ghar is a museum situated at
+                                                            Jiwaji Ganj in the historves.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Gujari Mahal -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Gujari Mahal.jpg" className="card-img-top"
+                                                        alt="Gujari Mahal">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Gujari Mahal</h5>
+                                                        <p className="card-text">Them is in charge of keeping the statue, and visitors may
+                                                            view it upon request.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Bateshwar Group of Temples -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Bateshwar Group.jpg" className="card-img-top"
+                                                        alt="Bateshwar Group of Temples">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Bateshwar Group of Temples</h5>
+                                                        <p className="card-text">Th temples were constructed between the
+                                                            eighth and tenth centuries.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Mitaoli -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Mitaoli.jpg" className="card-img-top"
+                                                        alt="Mitaoli">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Mitaoli</h5>
+                                                        <p className="card-text">The Indian Parliament Building.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Padavali -->
+                                            <div className="col-md-4 place-item">
+                                                <div className="card">
+                                                    <img src="images/places/Padavali.jpg" className="card-img-top"
+                                                        alt="Padavali">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Padavali</h5>
+                                                        <p className="card-text">The ancient time
+                                                            period on it!</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- Nearby Attractions Section -->
+                                    <section className="nearby-attractions my-5">
+                                        <h2 className="section-header">Nearby Attractions</h2>
+                                        <div className="row visit">
+                                            <!-- Orchha -->
+                                            <div className="col-md-6 nearby-attraction">
+                                                <div className="card">
+                                                    <img src="images/places/Orchha.jpg" className="card-img-top"
+                                                        alt="Orchha">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Orchha</h5>
+                                                        <p className="card-text">Disdeur of the Bundela
+                                                            dynasty.<br>Attractions: Orchha Fort, Jehangir Mahal, Ram
+                                                            Raja Temple, and the serene Betwa River.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Agra -->
+                                            <div className="col-md-6 nearby-attraction">
+                                                <div className="card">
+                                                    <img src="images/places/Agra.jpg" className="card-img-top" alt="Agra">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Agra</h5>
+                                                        <p className="card-text">Distance from Gwalior: Approximately 120
+                                                            km.<br>Importance: Home to the iconic Taj Mahal, Agra is a
+                                                            UNESCO World Heritage site and a symbol of eternal love,
+                                                            attracting millions of visitors from around the
+                                                            world.<br>Attractions: Taj Mahal, Agra Fort, Fatehpur Sikri,
+                                                            and the vibrant markets offering exquisite handicrafts and
+                                                            culinary delights.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Jhansi -->
+                                            <div className="col-md-6 nearby-attraction">
+                                                <div className="card">
+                                                    <img src="images/places/Jhansi.jpg" className="card-img-top"
+                                                        alt="Jhansi">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Jhansi</h5>
+                                                        <p className="card-text">Distance from Gwalior: Approximately 100
+                                                            km.<br>Importance: Steeped in history, Jhansi is best known
+                                                            for its association with the valiant Rani Lakshmibai, the
+                                                            iconic queen who led the Indian Rebellion of 1857 against
+                                                            British rule.<br>Attractions: Jhansi Fort, Rani Mahal, and
+                                                            the Jhansi Museum showcasing artifacts from the region's
+                                                            rich past.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <!-- Khajuraho -->
+                                            <div className="col-md-6 nearby-attraction">
+                                                <div className="card">
+                                                    <img src="images/places/Khajuraho.jpg" className="card-img-top"
+                                                        alt="Khajuraho">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">Khajuraho</h5>
+                                                        <p className="card-text">Distance from Gwalior: Approximately 280
+                                                            km.<br>Importance: Famous for its exquisite temples adorned
+                                                            with intricately carved sculptures depicting various facets
+                                                            of life, Khajuraho is a UNESCO World Heritage site and a
+                                                            testament to India's architectural
+                                                            brilliance.<br>Attractions: Khajuraho Group of Monuments,
+                                                            Kandariya Mahadev Temple, Lakshmana Temple, and the Sound
+                                                            and Light Show narrating the history of the temples.</p>
+                                                        <button className="load-more">Load More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>

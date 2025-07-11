@@ -1,0 +1,29 @@
+ .speakers-section {
+      text-align: center;
+      padding: 50px 0;
+    }
+    .speakers-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #6c7a89;
+      font-weight: 600;
+    }
+    .speaker-info {
+      margin-bottom: 40px;
+    }
+    .speaker-info h4 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #4f5b66;
+    }
+    .speaker-info p {
+      margin: 0;
+      font-size: 14px;
+      color: #999;
+    }
+    .divider {
+      width: 50px;
+      height: 2px;
+      background-color: #ccc;
+      margin: 20px auto;
+    }

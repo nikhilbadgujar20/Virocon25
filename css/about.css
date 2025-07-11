@@ -1,0 +1,100 @@
+.section-header {
+		background-color: #f8f9fa;
+		padding: 30px;
+		margin-bottom: 30px;
+		border-radius: 30px;
+	}
+
+	.section-header h2 {
+		margin-bottom: 20px;
+		font-weight: 700;
+	}
+
+	.reach-method {
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 20px;
+	}
+
+	.reach-method .icon {
+		font-size: 2rem;
+		margin-right: 15px;
+		background: linear-gradient(#b5337d, #ff6600);
+	}
+
+	.reach-method h4 {
+		margin-bottom: 10px;
+		font-weight: 600;
+	}
+
+	.reach-method p {
+		margin: 0;
+		font-size: 1rem;
+	}
+
+	.place-item {
+		margin-bottom: 30px;
+	}
+
+	.place-item img {
+		max-width: 100%;
+		height: 250px;
+		object-fit: cover;
+	}
+
+	.place-item h4 {
+		margin-top: 10px;
+		font-size: 1.5rem;
+	}
+
+	.nearby-attractions .nearby-attraction {
+		margin-bottom: 30px;
+	}
+
+	.nearby-attractions .nearby-attraction img {
+		max-width: 100%;
+		height: 300px;
+		object-fit: cover;
+	}
+
+	.card {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card-img-top {
+		height: 200px;
+		object-fit: cover;
+	}
+
+	.card-body {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card-text {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 4;
+		/* Adjust this number for how many lines you want to show */
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.load-more {
+		display: none;
+		cursor: pointer;
+		color: #007bff;
+		/* margin-top: auto; */
+		align-self: flex-start;
+		border: none;
+		background: none;
+		padding: 0;
+	}
+
+	.card-text.expanded {
+		-webkit-line-clamp: unset;
+		display: block;
+	}

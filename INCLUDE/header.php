@@ -33,16 +33,18 @@
 
 		<section>
 
-			<div class="container-fluid top-banner">
-				<div>
-					<a href="index.php">
-						<img class="img-fluid px-auto" src="images/web-all.jpg" alt="Banner Image">
-					</a>
-				</div>
-			</div>
+		<div class="container-fluid top-banner">
+  <div>
+    <a href="index.php">
+      <img class="img-fluid px-auto" src="images/web-all.jpg" alt="Banner Image">
+    </a>
+  </div>
+</div>
+
 			<!-- Main Navigation -->
 
-			<nav class="navbar main-nav border-less navbar-expand-lg p-0 px-0 " style="  top: 0;z-index: 1030; background-color: white;">
+			<nav class="navbar main-nav border-less navbar-expand-lg p-0 px-0 sticky-top" style="background-color: white; z-index: 1030;">
+
 				<div class="container-fluid py-4">
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"

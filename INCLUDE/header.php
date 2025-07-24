@@ -23,21 +23,39 @@
 	<body class="body-wrapper">
 		<!-- Top Black Strip -->
 		<div class="top-bar bg-dark text-white py-1">
-			<div class="container-fluid">
-				<p class="mb-0 small">
-					<i class="fa fa-envelope"></i>
-					<a href="mailto:director.niv@icmr.gov.in" class="text-white text-decoration-none text-start">virocon.2025@gmail.com</a>
-				</p>
-			</div>
-		</div>
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    
+    <!-- Left Side: Email -->
+    <p class="mb-0 small">
+      <i class="fa fa-envelope"></i>
+      <a href="mailto:director.niv@icmr.gov.in" class="text-white text-decoration-none">virocon.2025@gmail.com</a>
+    </p>
 
+    <!-- Right Side: Social Icons -->
+    <div class="social-icons d-flex gap-2 px-5">
+      <a href="https://www.facebook.com/people/ICMR-National-Institute-Of-Virology/100068945743124/">
+        <img src="images/social/facebook-icon.png" style="width: 40px;" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/icmr_niv?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+        <img src="images/social/instagram-icon.png" style="width: 40px;" alt="Instagram">
+      </a>
+      <a href="https://x.com/icmr_niv">
+        <img src="images/social/twitter-icon.png" style="width: 40px;"  alt="Twitter">
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+		</div>
 		<section>
 
 			<div class="container-fluid top-banner position-sticky">
-		<div class="position-sticky">
-			<a href="index.php"><img class="img-fluid px-auto" src="images/web-all.jpg" alt="Banner Image"></a>
-		</div>
-	</div>
+				<div class="position-sticky">
+					<a href="index.php"><img class="img-fluid px-0" src="images/logo-banner.png" alt="Banner Image"></a>
+				</div>
+			</div>
 			<!-- Main Navigation -->
 
 			<nav class="navbar main-nav border-less navbar-expand-lg p-0 px-0 " style="  top: 0;z-index: 1030; background-color: white;">
@@ -81,7 +99,7 @@
 									<a class="dropdown-item" href="404_page.php">Guidelines</a>
 									<a class="dropdown-item" href="404_page.php">Conference Fee</a>
 									<a class="dropdown-item" href="registration.php">Registration</a>
-									<a class="dropdown-item" href="404_page.php">Abstract Submission</a>
+									<a class="dropdown-item" href="registration and abstract submission.php?tab=abstractsubmission">Abstract Submission</a>
 								</div>
 							</li>
 							<li class="nav-item dropdown dropdown-slide">
@@ -95,7 +113,7 @@
 							</li>
 							<li class="nav-item dropdown dropdown-slide"><a class="nav-link" href="sponsorship_exhibition.php" data-toggle="dropdown">Sponsorship & Exhibition</a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="404_page.php">Sponsorship</a>
+									<a class="dropdown-item" href="sponsorship_exhibition.php?tab=sponsorship">Sponsorship</a>
 									<a class="dropdown-item" href="404_page.php">Exhibition</a>
 								</div>
 							</li>

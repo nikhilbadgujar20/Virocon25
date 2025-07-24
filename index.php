@@ -6,7 +6,7 @@
 			<div class="d-flex justify-content-between align-items-center breaking-news bg-white">
 				<marquee class="news-scroll" behavior="scroll" scrollamount="8" direction="left"
 					onmouseover="this.stop();" onmouseout="this.start();">
-					<p></p>
+					<p><p>
 				</marquee>
 			</div>
 		</div>
@@ -14,8 +14,10 @@
 </div>
 <div class="container-fluid top-banner">
 	<div class="position-relative">
-		<img class="img-fluid px-auto" src="images/virocon website banner 7 July Final.gif" alt="Banner Image">
-		<button class="btn btn-lg position-absolute image-button alternate mt-5" data-toggle="modal" data-target="#pdfModal">VIROCON 2025</button>
+		<img class="img-fluid px-auto" src="images/website_banner-new1.jpg" alt="Banner Image">
+		<button class="btn btn-block btn-lg d-block d-md-inline-block mt-3 mx-auto px-4 py-2" style="max-width: 100%; font-size: 1.6rem; background-color: #033a46; color: white;" data-toggle="modal" data-target="#pdfModal">
+			INVITATION FOR VIROCON 2025
+		</button>
 	</div>
 </div>
 <div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel"
@@ -26,7 +28,7 @@
 				<h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5><button type="button" class="close"
 					data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			</div>
-			<div class="modal-body"><iframe src="images/flyer/final_flyer.pdf" style="width:100%; height:500px;"
+			<div class="modal-body"><iframe src="images/flyer/final_flayer.pdf" style="width:100%; height:500px;"
 					frameborder="0"></iframe></div>
 			<div class="modal-footer"><button type="button" class="btn btn-secondary"
 					data-dismiss="modal">Close</button></div>
@@ -84,27 +86,26 @@
 			<div class="col-lg-12 col-md-6 align-self-center">
 				<div class="content-block">
 					<h2>Welcome To <span class="alternate">VIROCON</span></h2>
-					<div class="description-one">
+					<div class="description-one text-justify">
 						<p>The 21st century has witnessed the emergence and re-emergence of viral agents namely,
 							Dengue, Chikungunya, Swine flu, Nipah, CCHF, KFD and SARS-CoV-2. The recent COVID
 							pandemic has also accentuated the global vulnerability of such agents, which intrigued
 							the scientific community for gearing up the resources for an effective combat against
 							these threats. This pandemic has led to increased interest of global scientific
-							community to the world of viruses.</p>
+							community to the world of viruses.</p><br>
 						<p>It is a great pleasure for us in extending a warm and cordial invitation on behalf of the
 							Organizing Committee, to the eminent as well as budding Virologists in the country and
-							abroad to attend <b>“VIROCON-2024: Emerging Viruses: Pandemic & Biosecurity Perspectives”</b>.
-							This important conference is being organized by DRDO- Defence
-							Research & Development Establishment (NIV), Gwalior, India in association with Indian
-							Virological Society (IVS) during 11-13 November, 2024. DRDO-NIV, a prominent laboratory
-							of the Defence R&D Organisation (DRDO), Ministry of Defence, Govt of India, has been
+							abroad to attend <b>“VIROCON-2025: Changing Landscape in Human, Animal and Plant Viruses: Bridging Basics Science, Innovations and Public Health”</b>.
+							This important conference is being organized by ICMR- National Institute of Virology, Pune, India in association with Indian
+							Virological Society (IVS) during 08-10 December, 2025.</p><br>
+							<p> ICMR-NIV, a prominent laboratory of the Indian Council of Medical Research (ICMR), has been
 							working relentlessly since past several decades in empowering the nation in the realm of
-							Chem-Bio defence. IVS is a unique scientific society that foster research and
-							development in all fi elds of Virology including Medical, Veterinary, Plant and Aquatic
+							Virology Research. IVS is a unique scientific society that foster research and
+							development in all fields of Virology including Medical, Veterinary, Plant and Aquatic
 							Virology. IVS is a member of International Union of Microbiological Societies (IUMS) and
 							maintains close partnership with World Society for Virology (WSV) to address issues
-							related to trans-boundary viral infections.</p>
-						<p>We are confi dent that the conference will provide an excellent platform to the
+							related to trans-boundary viral infections.</p><br>
+						<p>We are confident that the conference will provide an excellent platform to the
 							participants for productive scientific deliberations, fruitful interactions and
 							collaboration for solutions to contain the viral epidemics that threatening human,
 							animal, plant, aquatic and environmental health. The major highlights of the conference
@@ -132,25 +133,24 @@
 			<li class="timeline-item mb-5">
 				<h5 class="fw-bold">Conference Dates</h5>
 				<p class="text-muted">Mark your calendars! The highly anticipated VIROCON – 2025 will take place
-					from <strong>11th to 13th November, 2025</strong>. Join us for an enriching experience filled
+					from <strong>08th to 10th December, 2025</strong>. Join us for an enriching experience filled
 					with insightful sessions and networking opportunities.</p>
 			</li>
 			<li class="timeline-item mb-5">
 				<h5 class="fw-bold">Registration Deadlines</h5>
 				<ul class="ml-3">
-					<li><strong>Early Registration Deadline:</strong> Secure your spot at VIROCON – 2024 by
-						registering before <strong>30th September, 2025</strong>. Take advantage of discounted rates
+					<li><strong>Early Registration Deadline:</strong> Secure your spot at VIROCON – 2025 by
+						registering before <strong>15th September, 2025</strong>. Take advantage of discounted rates
 						and ensure your participation in this premier event.</li>
 					<li class="mt-2"><strong>Regular Registration Deadline:</strong> Don't miss out! Secure your
-						spot at VIROCON – 2025 by registering before <strong>20th October, 2025</strong>. Avail the
+						spot at VIROCON – 2025 by registering before <strong>15th October, 2025</strong>. Avail the
 						standard registration rates and guarantee your attendance.</li>
-					<li class="mt-2"><strong>On-the-Spot Registration:</strong> Missed the deadline? Didn't get a
-						chance to register in advance? On-the-spot registration with a late fee will be available at
-						the venue.</li>
+					<li class="mt-2"><strong>Late Registration:</strong> Complete Your Registration On or Before <strong>5th November 2025</strong>
+						.</li>
 					<li class="mt-2"><strong>Abstract Submission:</strong> After successful submission of the
 						registration form and payment of the registration fee as per the applicable deadlines,
 						participants who wish to present their research should complete the abstract submission
-						form. The last date for abstract submission is <strong>20th October, 2025</strong>. Please
+						form. The last date for abstract submission is <strong>25th August, 2025</strong>. Please
 						ensure that your abstract is submitted by this date to allow sufficient time for review.
 					</li>
 				</ul>
@@ -408,9 +408,8 @@
 			<div class="col-md-8">
 				<div class="content-block">
 					<h2>Register Yourself <span class="alternate">Now!</span></h2>
-					<p>Please click the button below to register for the event.</p><a
-						href="https://docs.google.com/forms/d/e/1FAIpQLSeabvGiDc15K1h7PclRKIiBZwsGMQrv7uOSnSfkhhNF1QRVQw/viewform?usp=header"
-						target="_blank" class="btn btn-main-md">Register</a>
+					<p>Please click the button below to register for the event.</p>
+					<a href="register-now.php" class="btn btn-main-md">Register</a>
 				</div>
 			</div>
 			<div class="col-md-3 banner p-0">
@@ -425,7 +424,7 @@
 
 <section class="map mt-2 px-0">
 	<div class="map-container">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.182698858529!2d73.8701035746521!3d18.520644269173136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c05e1331b613%3A0x6f7311a9b204e495!2sNational%20Institute%20Of%20Virology%2C%20Camp!5e0!3m2!1sen!2sin!4v1752057045848!5m2!1sen!2sin"
+		<iframe src="https://www.google.com/maps/d/embed?mid=1pLL5LJYmMGK9zKzzIYK-x64NRO0n14A&ehbc=2E312F"
 			width="100%"
 			height="450"
 			style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -434,3 +433,5 @@
 
 
 <?php include 'INCLUDE/footer.php' ?>
+
+<!--https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.182698858529!2d73.8701035746521!3d18.520644269173136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c05e1331b613%3A0x6f7311a9b204e495!2sNational%20Institute%20Of%20Virology%2C%20Camp!5e0!3m2!1sen!2sin!4v1752057045848!5m2!1sen!2sin -->

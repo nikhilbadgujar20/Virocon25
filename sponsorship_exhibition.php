@@ -1,4 +1,4 @@
-<?php include 'INCLUDE/header.php'?>
+<?php include 'INCLUDE/header.php' ?>
 
 <!--==============================
 =            Schedule            =
@@ -17,141 +17,152 @@
 			<div class="col-12">
 				<div class="schedule-tab">
 					<ul class="nav nav-pills text-center">
-					  <li class="nav-item">
-					    <a class="nav-link active" href="#sponsorship" data-toggle="pill">
-					    	Sponsorship
-					    </a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" href="#exhibition" data-toggle="pill">
-							Exhibition
-					    </a>
-					  </li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#sponsorship" data-toggle="pill">
+								Sponsorship
+							</a>
+						</li>
+						<li class="nav-item">
+							<!-- <a class="nav-link" href="#exhibition" data-toggle="pill">
+								Exhibition
+							</a> -->
+						</li>
 					</ul>
 				</div>
 				<div class="schedule-contents about">
 					<div class="tab-content" id="pills-tabContent">
-					  <div class="tab-pane fade show active schedule-item" id="sponsorship">
-								<!-- Headings -->
-								<div class="container">
-									<!-- Sponsorship Section -->
-									<section class="container mt-5">
-										<div class="section-title white">
-											<h2>Sponsorship</h2>
-										</div>
-										<div class="section-title text-left">
-											<p>A broad range of packages in limited number on first come first serve
-												basis are available to suit every sponsor/ exhibitor to best present and
-												market itself at this prestigious event, which is to be visited by
-												various dignitaries and enthusiastic attendees. The packages as appended
-												below are open on first - come – first - serve based allotment. </p>
-										</div>
+						<div class="tab-pane fade show active schedule-item" id="sponsorship">
+							<!-- Headings -->
+							<div class="container">
+								<!-- Sponsorship Section -->
+								<section class="container mt-5">
+									<div class="section-title white">
+										<h2>Sponsorship</h2>
+									</div>
+									<div class="section-title text-left">
+										<p>Industries / companies are welcome to participate in conferences through sponsorship 
+											and advertisement. Broad ranges of sponsorship packages are available on a first-
+											come, first-served basis to suit every sponsor/exhibitor to show case, company’s
+											portfolio and variety of products useful in virological research. Renowned scientists,
+											researchers, faculties, students from academia and dignitaries from the Government,
+											Corporate organizations and industry will be participating in the conference. This is a
+											great opportunity to interact with the conference attendee and highlight your product
+											line.The details of packages for the sponsorships are as follows:</p>
+									</div>
 
-										<!-- Sponsorship Table -->
-										<div class="table-responsive mt-4">
-											<table class="table table-bordered text-center table-striped">
-												<thead>
-													<tr>
-														<th class="align-middle text-center">Type</th>
-														<th class="align-middle text-center">Fee</th>
-														<th class="align-middle text-center">Package</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Platinum</td>
-														<td>7.5 Lakhs</td>
-														<td>10X15 SFT area for display; 04 Nos of full-page
-															advertisement in Abstract Book; 04 complimentary
-															registrations in conference (kit, food & access to all
-															areas); Two lectures related to industry in virology
-															research.</td>
-													</tr>
-													<tr>
-														<td>Diamond</td>
-														<td>5.0 Lakhs</td>
-														<td>10X15 SFT area for display; 02 Nos of full-page
-															advertisement in Abstract Book; 03 complimentary
-															registrations in conference (kit, food & access to all
-															areas); One lecture related to industry in virology
-															research.</td>
-													</tr>
-													<tr>
-														<td>Gold</td>
-														<td>3.0 Lakhs</td>
-														<td>10X10 SFT area for display; 01 full-page advertisement in
-															Abstract Book; 02 complimentary registrations in conference
-															(kit, food & access to all areas).</td>
-													</tr>
-													<tr>
-														<td>Silver</td>
-														<td>2.0 Lakhs</td>
-														<td>10X10 SFT area for display; 01 full-page advertisement in
-															Abstract Book; 01 complimentary registration in conference
-															(kit, food & access to all areas).</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</section>
+									<!-- Sponsorship Table -->
+									<div class="table-responsive mt-4">
+										<table class="table table-bordered text-center table-striped">
+											<thead>
+												<tr>
+													<th class="align-middle text-center">Type</th>
+													<th class="align-middle text-center">Fee</th>
+													<th class="align-middle text-center">Package</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Platinum 1(Day1)</td>
+													<td>20 Lakhs</td>
+													<td>
+														<p>5 X 5 SFT area for display; Opportunity for 20 mins to
+															broadcast industry product usage in virology research</p>
+														<p>02 complimentary registrations in conference (kit, food &amp;
+															access to all areas.)</p>
+													</td>
+												</tr>
+												<tr>
+													<td>Diamond 2</td>
+													<td>15.0 Lakhs</td>
+													<td>
+														<p>5 X 5 SFT area for display; Opportunity for 15mins to
+															broadcast industry product usage in virology research</p>
+														02 complimentary registrations in conference (kit, food &amp;
+														access to all areas.)
+													</td>
+												</tr>
+												<tr>
+													<td>Gold 3</td>
+													<td>10.0 Lakhs</td>
+													<td>
+														<p>5 X 5 SFT area for display; Opportunity for 10 mins to
+															broadcast industry product usage in virology research</p>
+														<p>02 complimentary registrations in conference (kit, food &amp;
+															access to all areas.)</p>
+													</td>
+												</tr>
+												<tr>
+													<td>Silver
+														10 booths</td>
+													<td>5.0 Lakhs</td>
+													<td>
+														<p>5 X 5 SFT area for display;</p>
+														<p>01 complimentary registration in conference (kit, food &amp;
+															access to all areas.)</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</section>
 
-									<!-- Terms & Conditions Section -->
-									<section class="container mt-5">
-										<h3 class="text-center">TERMS & CONDITIONS</h3>
+								<!-- Terms & Conditions Section -->
+								<section class="container mt-5">
+									<h3 class="text-center">TERMS & CONDITIONS</h3>
 
-										<!-- Promotional Materials -->
-										<div class="mt-4">
-											<h5>Promotional Materials:</h5>
-											<p>Sponsors will be able to distribute any promotional materials or products
-												during the conference. All promotional materials must adhere to
-												conference guidelines and should not contain offensive or inappropriate
-												content.</p>
-										</div>
+									<!-- Promotional Materials -->
+									<div class="mt-4">
+										<h5>Promotional Materials:</h5>
+										<p>Sponsors will be able to distribute any promotional materials or products during the
+											conference. All promotional materials must adhere to conference guidelines and should
+											not contain offensive or inappropriate content, adhere to professional and marketing
+											needs and ethics, as per the requirements.</p>
+									</div>
 
-										<!-- Exhibition Booths -->
-										<div class="mt-4">
-											<h5>Exhibition Booths:</h5>
-											<p>Exhibition booths as specified will be provided. Exhibitors can visit
-												booths one day prior to have an overall idea. Booth designs and layouts
-												would be approved by the conference organizers to ensure compliance with
-												venue regulations and safety standards.</p>
-										</div>
+									<!-- Exhibition Booths -->
+									<div class="mt-4">
+										<h5>Exhibition Booths:</h5>
+										<p>Exhibition booths as specified will be provided at the venue. Exhibitors can visit booths
+											one day prior to have an overall idea. Booth designs and layouts would be approved by
+											the conference organizers to ensure compliance with venue regulations and safety
+											standards.</p>
+									</div>
 
-										<!-- Intellectual Property -->
-										<div class="mt-4">
-											<h5>Intellectual Property:</h5>
-											<p>Sponsors retain ownership of their intellectual property rights in all
-												materials provided for the conference.</p>
-										</div>
+									<!-- Intellectual Property -->
+									<div class="mt-4">
+										<h5>Intellectual Property:</h5>
+										<p>Sponsors retain ownership of their intellectual property rights in all materials provided
+											for the conference.</p>
+									</div>
 
-										<!-- Cancellation and Termination -->
-										<div class="mt-4">
-											<h5>Cancellation and Termination:</h5>
-											<p>The conference organizers reserve the right to cancel sponsorship
-												agreements in the event of non-compliance with these terms and
-												conditions or for any other justifiable reason.</p>
-										</div>
+									<!-- Cancellation and Termination -->
+									<div class="mt-4">
+										<h5>Cancellation and Termination:</h5>
+										<p>The conference organizers reserve the right to cancel sponsorship agreements in the
+											event of non-compliance with these terms and conditions or for any other justifiable
+											reason and there would be no refund on cancellation.</p>
+									</div>
 
-										<!-- Miscellaneous -->
-										<div class="mt-4">
-											<h5>Miscellaneous:</h5>
-											<p>IVS reserves the right to update or modify these terms and conditions at
-												any time with notice provided to sponsors in writing.</p>
-										</div>
-									</section>
+									<!-- Miscellaneous -->
+									<div class="mt-4">
+										<h5>Miscellaneous:</h5>
+										<p>IVS reserves the right to update or modify these terms and conditions at
+											any time with notice provided to sponsors in writing.</p>
+									</div>
+								</section>
 
-									<!-- Contact Section -->
-									<section class="container mt-5">
-										<h3 class="text-center">Contact Us</h3>
-										<p class="text-center">In case of any query related to sponsorship feel free to
-											contact the IVS Secretariat.</p>
-									</section>
+								<!-- Contact Section -->
+								<section class="container mt-5">
+									<h3 class="text-center">Contact Us</h3>
+									<p class="text-center">In case of any query related to sponsorship feel free to contact the Virocon 2025
+										Secretariat.</p>
+								</section>
 
-								</div>
 							</div>
-					  <div class="tab-pane fade schedule-item" id="exhibition">
-					  	<!-- Headings -->
-					  	<div class="container">
+						</div>
+						<div class="tab-pane fade schedule-item" id="exhibition">
+							<!-- Headings -->
+							<div class="container">
 								<div class="col-lg-8 col-md-6 align-self-center">
 									<div class="content-block">
 										<!-- <h2>DRDE</h2> -->
@@ -159,26 +170,26 @@
 											<p>
 												A thematic exhibition will be organized during the conference. The exhibition stalls/booths will be made ready 2 days prior to the conference and will be open for the visit of sponsors.
 											</p>
-												<!-- Contact Section -->
-									<section class="container mt-5">
-										<h3 class="text-center">Contact Us</h3>
-										<p class="text-center">In case of any query related to Exhibition feel free to
-											contact the IVS Secretariat.</p>
-									</section>
+											<!-- Contact Section -->
+											<section class="container mt-5">
+												<h3 class="text-center">Contact Us</h3>
+												<p class="text-center">In case of any query related to Exhibition feel free to
+													contact the IVS Secretariat.</p>
+											</section>
 
-								</div>
-							</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					  </div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
+	</div>
+
+	</div>
+	</div>
 	</div>
 </section>
 
@@ -205,9 +216,9 @@
 				<div class="block content-block">
 					<!-- Coundown Timer -->
 					<div class="timer"></div>
+				</div>
+			</div>
 		</div>
-		</div>
-	</div>
 	</div>
 	<!-- <div class="image-block"><img src="images/inidan-woman.png" alt="" class="img-fluid"></div> -->
 </section>
@@ -218,7 +229,4 @@
 =            Footer            =
 =============================-->
 
-<?php include 'INCLUDE/footer.php'?>
-
-
-
+<?php include 'INCLUDE/footer.php' ?>

@@ -18,7 +18,7 @@
 			<div class="col-12">
 				<div class="schedule-tab">
 					<ul class="nav nav-pills text-center">
-					  <li class="nav-item">
+					  <!-- <li class="nav-item">
 					    <a class="nav-link active" href="#pointnote" data-toggle="pill">
 					    	Points to note
 					    </a>
@@ -37,7 +37,7 @@
 					    <a class="nav-link" href="#registration" data-toggle="pill">
 							Registration
 					    </a>
-					  </li>
+					  </li> -->
 					  <li class="nav-item">
 					    <a class="nav-link" href="#abstractsubmission" data-toggle="pill">
 							Abstract Submission

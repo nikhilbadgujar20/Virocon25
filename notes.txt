@@ -1,0 +1,62 @@
+ <div class="container-fluid px-5">
+    <h3 class="mb-3 text-center">Delegates Registered <hr></h3>
+
+    <!-- <div class="scroll-container mb-4"> -->
+      <table class="table table-bordered align-middle table-sm" id="regTable">
+        <thead class="table-light">
+          <tr class ="text-center">
+            <th>#</th>
+            <th>Title</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Organization</th>
+            <th>Delegate Type</th>
+            <th>Nature of Delegate</th>
+            <th>Postal Address</th>
+            <th>City</th>
+            <th>Pin Code</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Telephone</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Accompanying Persons</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Registered At</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php while ($row = $result->fetch_assoc()): ?>
+            <tr id="row-<?= $row['id'] ?>">
+              <td><?= $row['id'] ?></td>
+              <td><?= htmlspecialchars($row['title']) ?></td>
+              <td><?= htmlspecialchars($row['first_name'] . ' ' . $row['last_name']) ?></td>
+              <td><?= htmlspecialchars($row['gender']) ?></td>
+              <td><?= htmlspecialchars($row['organization']) ?></td>
+              <td><?= htmlspecialchars($row['delegate_type']) ?></td>
+              <td><?= htmlspecialchars($row['nature_of_delegate']) ?></td>
+              <td><?= htmlspecialchars($row['postal_address']) ?></td>
+              <td><?= htmlspecialchars($row['city']) ?></td>
+              <td><?= htmlspecialchars($row['pin_code']) ?></td>
+              <td><?= htmlspecialchars($row['state']) ?></td>
+              <td><?= htmlspecialchars($row['country']) ?></td>
+              <td><?= htmlspecialchars($row['telephone_no']) ?></td>
+              <td><?= htmlspecialchars($row['mobile_no']) ?></td>
+              <td><?= htmlspecialchars($row['email']) ?></td>
+              <td><?= $row['no_of_accompanying_persons'] ?></td>
+              <td>₹<?= number_format($row['payment_amount'], 2) ?></td>
+              <td><span class="badge bg-<?= $row['status'] === 'accepted' ? 'success' : ($row['status'] === 'rejected' ? 'danger' : 'secondary') ?>"><?= ucfirst($row['status']) ?></span></td>
+              <td><?= date('d M Y H:i', strtotime($row['created_at'])) ?></td>
+              <td class="text-center">
+                <a href="view.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-info w-100 mb-1">View</a>
+                <button data-id="<?= $row['id'] ?>" data-action="accepted" class="btn btn-sm btn-success act-btn w-100 mb-1">Accept</button>
+                <button data-id="<?= $row['id'] ?>" data-action="rejected" class="btn btn-sm btn-danger act-btn w-100 mb-1">Reject</button>
+              </td>
+            </tr>
+          <?php endwhile; ?>
+        </tbody>
+      </table>
+    <!-- </div> -->
+  </div>

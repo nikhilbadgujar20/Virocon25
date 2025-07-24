@@ -578,7 +578,7 @@ select.form-control:not([size]):not([multiple]) {
   font-weight: 600;
   position: relative;
   text-align: center;
-  color: #4001b5;
+  color: #030009;
   padding-left: 8px;
   padding-right: 20px;
   font-size: 1.06rem;
@@ -3978,6 +3978,7 @@ body {
   color: #fff;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 
 /* Button Group Spacing */
 .button-group {

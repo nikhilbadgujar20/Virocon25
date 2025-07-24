@@ -112,7 +112,7 @@
 												ICMR-NIV</li>
 											<li class="list-group-item"><strong>Dr. Sarah S Cherian</strong>,
 												Scientist ‘G’</li>
-											<li class="list-group-item"><strong>Dr. Babasaheb B Tandale</strong>, Scientist ‘G’</li>
+											<li class="list-group-item"><strong>Dr. Babasaheb v Tandale</strong>, Scientist ‘G’</li>
 											<li class="list-group-item"><strong>Dr. Vijay P. Bondre</strong>,Scientist ‘G’</li>
 											<li class="list-group-item"><strong>Dr. B Anukumar</strong>, Scientist ‘F’</li>
 											<li class="list-group-item"><strong>Dr. Yogesh K. Gurav</strong>,Scientist ‘F’</li>
@@ -134,7 +134,7 @@
 											<P><B>PATRON </B></P>
 											<li class="list-group-item"><strong>Dr. Rajiv Bahl</strong>, DG,
 												Indian Council of Medical Research</li>
-											<li class="list-group-item"><strong>Dr.-----------</strong>,##### </li>
+											<!--<li class="list-group-item"><strong>Dr.-----------</strong>,##### </li> -->
 											<hr />
 											<P><B>CHAIRMAN </B></P>
 											<li class="list-group-item"><strong>Dr. Naveen Kumar</strong>, Director, ICMR-National Institute of Virology, Pune</li>

@@ -1,6 +1,5 @@
 <?php
 // Only handle POST request with at least one required field present
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['first_name'])) {
 
     // 1. Database connection
     $host = "localhost";
@@ -12,5 +11,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['first_name'])) {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-}
 ?>

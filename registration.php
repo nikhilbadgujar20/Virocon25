@@ -5,56 +5,56 @@
 
 <main class="container-fluid">
     <section class="registration-info">
-        <h1>Join Us for VIROCON 2025!</h1>
-        <p style="color:black"><strong>Date:</strong> Dec 10–12, 2025 | Location: Update Soon</p>
-        <p style="color:black">Host: ICMR- National Institude of Virology</p>
-        <p style="color:black"><strong>REGISTER NOW</strong> to be part of this major event for virology researchers!</p>
+        <h3>Join Us for VIROCON 2025!</h3>
+        <p style="color:black"><strong>Date:</strong> Dec 08–10, 2025 |<strong> Location:</strong> Conrad Hotel, Pune, Maharastra, India </p><br>
+        <p style="color:black"><strong>Host:</strong> ICMR-National Institude of Virology, Pune</p><br>
+        <p style="color:black"><strong>REGISTER NOW</strong> to be part of this major event for virology researchers!</p><br>
         <div class="buttons">
             <a href="register-form.php" class="btn orange">Register Now</a>
         </div>
     </section>
 
     <section class="pricing-table">
-        <h2>Registration Fees</h2>
+        <h3>Registration Fees</h3>
         <table>
             <thead>
                 <tr>
                     <th>Category</th>
-                    <th>Early Bird<br> (Ends 31st July)</th>
-                    <th>Standard<br> (30th October)</th>
-                    <th>Late/On-site<br> (------)</th>
+                    <th>Early Bird<br> <i>(Till 15th September)</i></th>
+                    <th>Standard<br> <i>(Till 15th October)</i></th>
+                    <th>Late/On-site<br> <i>(Till 05th November)</i></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>IVS Member</td>
-                    <td>$625</td>
-                    <td>$675</td>
-                    <td>$725</td>
+                    <td>7500</td>
+                    <td>8500</td>
+                    <td>9500</td>
                 </tr>
                 <tr>
-                    <td>Graduate Student</td>
-                    <td>$500</td>
-                    <td>$550</td>
-                    <td>$600</td>
+                    <td>Non IVS Member</td>
+                    <td>8500</td>
+                    <td>10000</td>
+                    <td>10500</td>
                 </tr>
                 <tr>
-                    <td>Undergraduate Student</td>
-                    <td>$300</td>
-                    <td>$350</td>
-                    <td>$400</td>
+                    <td>Student/Reaserch Fellows</td>
+                    <td>4500</td>
+                    <td>5500</td>
+                    <td>6000</td>
                 </tr>
                 <tr>
-                    <td>Non-Member</td>
-                    <td>$1,025</td>
-                    <td>$1,075</td>
-                    <td>$1,125</td>
+                    <td>Industry/Corporate</td>
+                    <td>13000</td>
+                    <td>16000</td>
+                    <td>21500</td>
                 </tr>
                 <tr>
-                    <td>Guest</td>
-                    <td>$75</td>
-                    <td>$75</td>
-                    <td>$75</td>
+                    <td>Accompaying Person <br>(no kit will be provided) </td>
+                    <td>4500</td>
+                    <td>5500</td>
+                    <td>6000</td>
                 </tr>
             </tbody>
         </table>

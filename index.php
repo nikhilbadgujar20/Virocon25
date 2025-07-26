@@ -169,7 +169,8 @@
 		</ul>
 	</div>
 </section>
-<section class="section pt-0 pb-0">
+
+<!--<section class="section pt-0 pb-0">
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col-md-12">
@@ -178,16 +179,16 @@
 				</div>
 			</div>
 		</div>
-		<!-- Registration Timeline -->
+		
 		<div class="container text-center mt-4">
 			<div class="btn-group mb-4" role="group">
-				<button type="button" class="btn btn-outline-primary active" onclick="selectPeriod('early')">Early (Till 30th Sept 2025)</button>
-				<button type="button" class="btn btn-outline-primary" onclick="selectPeriod('regular')">Regular (Till 20th Oct 2025)</button>
-				<button type="button" class="btn btn-outline-primary" onclick="selectPeriod('late')">Late/On-Spot</button>
+				<button type="button" class="btn btn-outline-primary active" onclick="selectPeriod('early')">Early <i>(Till 15th Sept 2025)</i></button>
+				<button type="button" class="btn btn-outline-primary" onclick="selectPeriod('regular')">Regular<i>(Till 15th Oct 2025)</i></button>
+				<button type="button" class="btn btn-outline-primary" onclick="selectPeriod('late')">Late/On-Spot<i>(Till 05th Nov 2025)</i></button>
 			</div>
 		</div>
 
-		<!-- Table (Keep your existing table here) -->
+		
 		<div class="row">
 			<div class="col-md-12">
 				<table class="table table-bordered text-center table-striped" id="feeTable">
@@ -204,37 +205,37 @@
 						<tr>
 							<td><input type="radio" name="feeOption"></td>
 							<td>IVS Members</td>
-							<td>7000</td>
-							<td>8000</td>
+							<td>7500</td>
 							<td>8500</td>
-						</tr>
-						<tr>
-							<td><input type="radio" name="feeOption"></td>
-							<td>Non IVS Members</td>
-							<td>8000</td>
-							<td>9000</td>
 							<td>9500</td>
 						</tr>
 						<tr>
 							<td><input type="radio" name="feeOption"></td>
+							<td>Non IVS Members</td>
+							<td>8500</td>
+							<td>10000</td>
+							<td>10500</td>
+						</tr>
+						<tr>
+							<td><input type="radio" name="feeOption"></td>
 							<td>Students/Research Fellows</td>
-							<td>4000</td>
-							<td>5000</td>
+							<td>4500</td>
 							<td>5500</td>
+							<td>6000</td>
 						</tr>
 						<tr>
 							<td><input type="radio" name="feeOption"></td>
 							<td>Industry/Corporate</td>
-							<td>12000</td>
-							<td>15000</td>
-							<td>20000</td>
+							<td>13000</td>
+							<td>16000</td>
+							<td>21500</td>
 						</tr>
 						<tr>
 							<td><input type="radio" name="feeOption"></td>
 							<td>Accompanying Person (kit will not be provided)</td>
-							<td>4000</td>
-							<td>5000</td>
+							<td>4500</td>
 							<td>5500</td>
+							<td>6000</td>
 						</tr>
 					</tbody>
 				</table>
@@ -245,12 +246,12 @@
 	</div>
 
 
-	<!-- Pay Button -->
+	
 	<div class="text-center mt-4">
 		<button id="payButton" class="btn btn-success btn-lg" disabled>Pay Now</button>
 	</div>
 
-	<!-- Razorpay script -->
+	
 	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 	<script>
@@ -258,11 +259,12 @@
 		let selectedAmount = 0;
 		let selectedCategory = '';
 
-		// Called on page load
+		
 		window.onload = function() {
 			const today = new Date();
-			const earlyDeadline = new Date("2025-09-30");
-			const regularDeadline = new Date("2025-10-20");
+			const earlyDeadline = new Date("2025-09-15");
+			const regularDeadline = new Date("2025-10-15");
+			const lateDeadline = new Date("2025-05-1")
 			const options = {
 				year: 'numeric',
 				month: 'long',
@@ -271,7 +273,7 @@
 			const formattedDate = today.toLocaleDateString('en-IN', options);
 			document.getElementById("dateLabel").textContent = "Today: " + formattedDate;
 
-			// Determine current period
+			
 			if (today <= earlyDeadline) {
 				selectedPeriod = 'early';
 			} else if (today <= regularDeadline) {
@@ -280,7 +282,7 @@
 				selectedPeriod = 'late';
 			}
 
-			// Set active button
+			
 			const buttons = document.querySelectorAll(".btn-group .btn");
 			buttons.forEach(btn => {
 				btn.classList.remove("active");
@@ -299,13 +301,13 @@
 
 			const currentIndex = periodIndex[selectedPeriod];
 
-			// Handle radio selection
+			
 			const rows = document.querySelectorAll("#feeTable tbody tr");
 			rows.forEach(row => {
 				const radio = row.querySelector("input[type='radio']");
 				const amountCell = row.children[currentIndex];
 
-				// Style non-current period cells
+				
 				for (let i = 2; i <= 4; i++) {
 					if (i !== currentIndex) {
 						row.children[i].style.color = "#999";
@@ -316,10 +318,10 @@
 				}
 
 				radio.addEventListener("change", function() {
-					// Clear highlight from all rows
+					
 					rows.forEach(r => r.classList.remove("table-primary"));
 
-					// Highlight selected row
+					
 					if (radio.checked) {
 						row.classList.add("table-primary");
 						selectedAmount = parseInt(amountCell.innerText);
@@ -331,7 +333,7 @@
 		};
 
 
-		// Pay button handler
+		
 		document.getElementById("payButton").addEventListener("click", function() {
 			if (selectedAmount <= 0) {
 				alert("Please select a valid category.");
@@ -339,7 +341,7 @@
 			}
 
 			const options = {
-				"key": "rzp_test_aRRY41tkiwfWbk", // Replace with your Razorpay key
+				"key": "rzp_test_aRRY41tkiwfWbk", 
 				"amount": selectedAmount * 100,
 				"currency": "INR",
 				"name": "VIROCON 2025",
@@ -396,7 +398,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <!-- Countdown Timer Section -->
 <div class="container text-center my-4">
 	<h2>Countdown to VIROCON 2025</h2>

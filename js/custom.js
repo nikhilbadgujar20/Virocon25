@@ -36,7 +36,7 @@
         //  Count Down JS
         // -----------------------------
         $('.timer').syotimer({
-            year: 2024,
+            year: 2025,
             month: 11,
             day: 13,
             hour: 9,
@@ -112,9 +112,9 @@
 })(jQuery);
 
 
-// Countdown Timer for December 10, 2025
+// Countdown Timer for December 8, 2025
 function updateCountdown() {
-    const targetDate = new Date("December 10, 2025 00:00:00").getTime();
+    const targetDate = new Date("December 8, 2025 00:00:00").getTime();
     const now = new Date().getTime();
     const distance = targetDate - now;
 
@@ -130,8 +130,9 @@ function updateCountdown() {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.getElementById("countdown").innerHTML =
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
 const interval = setInterval(updateCountdown, 1000);
 updateCountdown();
+

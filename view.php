@@ -1,4 +1,19 @@
 <?php // view.php
+session_start();
+if (!isset($_SESSION['admin_logged_in'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$timeout = 1800; // 30 minutes
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $timeout) {
+    session_unset();
+    session_destroy();
+    header("Location: login.php");
+    exit();
+}
+$_SESSION['LAST_ACTIVITY'] = time();
+
 require_once 'auth.php';
 require_once 'db.php';
 
@@ -65,6 +80,9 @@ if (!$reg = $res->fetch_assoc()) {
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
+    window.addEventListener("beforeunload", function () {
+    navigator.sendBeacon('logout.php');
+});
     $(document).on('click', '.act-btn', function () {
         const id = $(this).data('id');
         const action = $(this).data('action');

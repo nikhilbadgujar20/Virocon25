@@ -52,7 +52,7 @@
 
 									<!-- Sponsorship Table -->
 									<div class="table-responsive mt-4">
-										<table class="table table-bordered text-center table-striped">
+										<table class="table table-bordered text-left table-striped">
 											<thead>
 												<tr>
 													<th class="align-middle text-center">Type</th>

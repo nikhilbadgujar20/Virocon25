@@ -7,17 +7,18 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>VIROCON</title>
 		<link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="plugins/themefisher-font/style.php" rel="stylesheet">
+		<link href="plugins/themefisher-font/style.html" rel="stylesheet">
 		<link href="../plugins/font-awsome/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../cdnjs.cloudflare.com//ajax/libs/font-awesome//6.2.0/css/all.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 		<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
 		<link href="plugins/slick/slick.css" rel="stylesheet">
 		<link href="plugins/slick/slick-theme.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+		<link href="css/style.css?v=2.1" rel="stylesheet">
+
 		<link href="images/favicon.png" rel="shortcut icon">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-
+        
 	</head>
 
 	<body class="body-wrapper">
@@ -46,12 +47,9 @@
 
   </div>
 </div>
-
-
-		</div>
-		<section>
-
-			<div class="container-fluid top-banner position-sticky">
+</div>
+<section>
+<div class="container-fluid top-banner position-sticky">
 				<div class="position-sticky">
 					<a href="index.php"><img class="img-fluid px-0" src="images/logo-banner.png" alt="Banner Image"></a>
 				</div>
@@ -95,9 +93,9 @@
 								</div>
 							</li>
 							<li class="nav-item dropdown dropdown-slide"><a class="nav-link" href="registration and abstract submission.php" data-toggle="dropdown">Registration & Abstract Submission</a>
-								<div class="dropdown-menu"><a class="dropdown-item" href="404_page.php">Points to note</a>
-									<a class="dropdown-item" href="404_page.php">Guidelines</a>
-									<a class="dropdown-item" href="404_page.php">Conference Fee</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="registration and abstract submission.php?tab=guidelines">Guidelines</a>
+									<a class="dropdown-item" href="registration and abstract submission.php?tab=guidelines">Conference Fee</a>
 									<a class="dropdown-item" href="registration.php">Registration</a>
 									<a class="dropdown-item" href="registration and abstract submission.php?tab=abstractsubmission">Abstract Submission</a>
 								</div>

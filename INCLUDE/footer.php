@@ -53,37 +53,12 @@
 	<script src="plugins/isotope/mixitup.min.js"></script>
 	<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 	<script src="plugins/slick/slick.min.js"></script>
-	<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
 	<script type="text/javascript" src="plugins/google-map/gmap.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-	<script>
-	  $(document).ready(function() {
-	    $('.virocon-timer').syotimer({
-	      year: 2025,
-	      month: 12,
-	      day: 10,
-	      hour: 0,
-	      minute: 0,
-	      second: 0,
-	      layout: 'dhms',
-	      itemTemplate: function(unit, value) {
-	        let label = {
-	          day: "Days",
-	          hour: "Hours",
-	          minute: "Minutes",
-	          second: "Seconds"
-	        } [unit];
-	        return '<div class="timer-card"><span>' + value + '</span><small>' + label + '</small></div>';
-	      },
-	      afterDeadline: function(timerBlock) {
-	        timerBlock.html('<p class="text-danger font-weight-bold">Event Started</p>');
-	      }
-	    });
-	  });
-	</script>
+
 
 	</body>
 	<script>

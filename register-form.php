@@ -1,468 +1,334 @@
-<?php
-include 'INCLUDE/header.php';
-include 'conn.php';
-include 'includes/PHPMailer-master/PHPMailerAutoload.php';
-?>
-<section>
-    <div class="container mt-5 mb-5">
-        <h2 class="mb-4 text-center">Delegate Registration Form</h2>
-        <form action="register-now.php" method="POST" id="registrationForm">
-            <!-- Title, Gender, First & Last Name -->
-            <div class="row mb-3">
-                <!-- Title Dropdown -->
-                <div class="col-md-2">
-                    <label for="titleDropdown" class="form-label">Title</label>
-                    <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="titleDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            Choose...
-                        </button>
-                        <ul class="dropdown-menu w-100" aria-labelledby="titleDropdown">
-                            <li><a class="dropdown-item" href="#" onclick="selectDropdown('Mr.', 'titleDropdown', 'titleInput')">Mr.</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="selectDropdown('Mrs.', 'titleDropdown', 'titleInput')">Mrs.</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="selectDropdown('Ms.', 'titleDropdown', 'titleInput')">Ms.</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="selectDropdown('Dr.', 'titleDropdown', 'titleInput')">Dr.</a></li>
-                        </ul>
+
+
+    <?php
+    include 'INCLUDE/header.php';
+    include 'conn.php';
+    include 'includes/PHPMailer-master/PHPMailerAutoload.php';
+    ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delegate Registration</title>
+
+    <!-- ✅ Bootstrap 5 CSS (for dropdowns and layout) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Optional: Your own CSS (if any) -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <section>
+        <div class="container mt-5 mb-5">
+            <h2 class="mb-4 text-center text-primary text-bold">Delegate Registration Form</h2>
+            <form action="register-now.php" method="POST" id="registrationForm">
+                <div class="row mb-3">
+                    <div class="col-md-2">
+                        <label for="title" class="form-label">Title</label>
+                        <select class="form-select" id="title" name="title" required>
+                            <option value="">Select</option>
+                            <option value="Dr.">Dr.</option>
+                            <option value="Prof.">Prof.</option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Ms.">Ms.</option>
+                        </select>
                     </div>
-                    <input type="hidden" name="title" id="titleInput" required>
-                </div>
-
-                <!-- Gender Dropdown -->
-                <div class="col-md-2">
-                    <label for="genderDropdown" class="form-label">Gender</label>
-                    <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" id="genderDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            Choose...
-                        </button>
-                        <ul class="dropdown-menu w-100" aria-labelledby="genderDropdown">
-                            <li><a class="dropdown-item" href="#" onclick="selectDropdown('Male', 'genderDropdown', 'genderInput')">Male</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="selectDropdown('Female', 'genderDropdown', 'genderInput')">Female</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="selectDropdown('Other', 'genderDropdown', 'genderInput')">Other</a></li>
-                        </ul>
+                    <div class="col-md-5">
+                        <label for="fname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="fname" name="fname" required>
                     </div>
-                    <input type="hidden" name="gender" id="genderInput" required>
+                    <div class="col-md-5">
+                        <label for="lname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lname" name="lname" required>
+                    </div>
                 </div>
 
-                <!-- First Name -->
-                <div class="col-md-4">
-                    <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="firstName" name="first_name" required>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" id="gender" name="gender" required>
+                            <option value="">Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                     <!-- Organization -->
+                    <div class="col-md-8">
+                        <label for="organization" class="form-label">Organization</label>
+                        <input type="text" class="form-control" id="organization" name="organization">
+                    </div>
+                </div>
+                <!-- Delegate Type -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="delegateType" class="form-label">Delegate Type</label>
+
+                        <select class="form-select" id="delegateType" name="delegate_type" required>
+                            <option value="">Select</option>
+                            <option value="Male">National</option>
+                            <option value="Female">International</option>
+
+                        </select>
+
+                    </div>
+                    <div class="col-md-8">
+                        <label for="natureOfDelegate" class="form-label">Nature of Delegate</label>
+                        <select class="form-select" id="natureOfDelegate" name="nature_of_delegate" required>
+                            <option value="">Select</option>
+                            <option value="MaAcamadic Or Reasearch Organizationle">Acamadic Or Reasearch Organization</option>
+                            <option value="Industry">Industry</option>
+                            <option value="Accompanying Person">Accompanying Person</option>
+                        </select>
+                        <!-- <input type="text" class="form-control" id="natureOfDelegate" name="nature_of_delegate" required> -->
+                    </div>
                 </div>
 
-                <!-- Last Name -->
-                <div class="col-md-4">
-                    <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" name="last_name" required>
+                <!-- Postal Address -->
+                <div class="mb-3">
+                    <label for="postalAddress" class="form-label">Postal Address</label>
+                    <textarea class="form-control" id="postalAddress" name="postal_address" rows="2"></textarea>
                 </div>
-            </div>
 
-            <!-- Organization -->
-            <div class="mb-3">
-                <label for="organization" class="form-label">Organization</label>
-                <input type="text" class="form-control" id="organization" name="organization">
-            </div>
+                <!-- City, Pin, State -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" name="city">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="pincode" class="form-label">Pin Code</label>
+                        <input type="text" class="form-control" id="pincode" name="pin_code" pattern="\d{6}" title="Enter a valid 6-digit pin code">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="state" class="form-label">State</label>
+                        <input type="text" class="form-control" id="state" name="state">
+                    </div>
+                </div>
 
-            <!-- Delegate Type -->
-            <div class="row mb-3">
-                <div class="col-md-4">
-                    <label for="delegateType" class="form-label">Delegate Type</label>
-                    <input type="text" class="form-control" id="delegateType" name="delegate_type" required>
+                <!-- Country, Telephone, Mobile -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" class="form-control" id="country" name="country">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="telephone" class="form-label">Telephone No</label>
+                        <input type="tel" class="form-control" id="telephone" name="telephone_no">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="mobile" class="form-label">Mobile No</label>
+                        <input type="tel" class="form-control" id="mobile" name="mobile_no" required>
+                    </div>
                 </div>
-                <div class="col-md-8">
-                    <label for="natureOfDelegate" class="form-label">Nature of Delegate</label>
-                    <input type="text" class="form-control" id="natureOfDelegate" name="nature_of_delegate" required>
-                </div>
-            </div>
 
-            <!-- Postal Address -->
-            <div class="mb-3">
-                <label for="postalAddress" class="form-label">Postal Address</label>
-                <textarea class="form-control" id="postalAddress" name="postal_address" rows="2"></textarea>
-            </div>
+                <!-- Accompanying Persons -->
+                <div class="mb-3">
+                    <label for="accompanyingPersons" class="form-label">No. of Accompanying Persons</label>
+                    <input type="number" class="form-control" id="accompanyingPersons" name="no_of_accompanying_persons" min="0" max="3">
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <label for="delegateType" class="form-label">Attempting As</label>
 
-            <!-- City, Pin, State -->
-            <div class="row mb-3">
-                <div class="col-md-4">
-                    <label for="city" class="form-label">City</label>
-                    <input type="text" class="form-control" id="city" name="city">
-                </div>
-                <div class="col-md-4">
-                    <label for="pincode" class="form-label">Pin Code</label>
-                    <input type="text" class="form-control" id="pincode" name="pin_code" pattern="\d{6}" title="Enter a valid 6-digit pin code">
-                </div>
-                <div class="col-md-4">
-                    <label for="state" class="form-label">State</label>
-                    <input type="text" class="form-control" id="state" name="state">
-                </div>
-            </div>
+                        <select class="form-select" id="Attempting" name="Attempting_as" required>
+                            <option value="">Select</option>
+                            <option value="participant">participant</option>
+                            <option value="Presenter">Presenter</option>
 
-            <!-- Country, Telephone, Mobile -->
-            <div class="row mb-3">
-                <div class="col-md-4">
-                    <label for="country" class="form-label">Country</label>
-                    <input type="text" class="form-control" id="country" name="country">
-                </div>
-                <div class="col-md-4">
-                    <label for="telephone" class="form-label">Telephone No</label>
-                    <input type="tel" class="form-control" id="telephone" name="telephone_no">
-                </div>
-                <div class="col-md-4">
-                    <label for="mobile" class="form-label">Mobile No</label>
-                    <input type="tel" class="form-control" id="mobile" name="mobile_no" required>
-                </div>
-            </div>
+                        </select>
 
-            <!-- Accompanying Persons -->
-            <div class="mb-3">
-                <label for="accompanyingPersons" class="form-label">No. of Accompanying Persons</label>
-                <input type="number" class="form-control" id="accompanyingPersons" name="no_of_accompanying_persons" min="0" max="3">
-            </div>
+                    </div>
+                    <!-- File Upload (only for Presenter) -->
+                    <div class="row mb-3" id="fileUploadBox" style="display: none;">
+                        <div class="col-md-12">
+                            <label for="presentationFile" class="form-label">Upload Presentation File (.docx or .pdf, max 5MB)</label>
+                            <input type="file" class="form-control" id="presentationFile" name="presentation_file" accept=".pdf,.docx">
+                            <div class="text-danger small mt-1" id="fileError"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Abstract Details (only for Presenter) -->
+                    <div id="abstractFields" style="display: none;">
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="person1" class="form-label">Accompanying Person 1</label>
-                    <input type="text" class="form-control" id="person1" name="person1">
-                </div>
-                <div class="col-md-6">
-                    <label for="relation1" class="form-label">Relation 1</label>
-                    <input type="text" class="form-control" id="relation1" name="relation1">
-                </div>
-            </div>
+                        <!-- Title of Abstract -->
+                        <div class="mb-3">
+                            <label for="abstractTitle" class="form-label">Title of Abstract <span class="text-muted">(max 25 words, small letters only)</span></label>
+                            <input type="text" class="form-control" id="abstractTitle" name="abstract_title" oninput="validateTitle()" placeholder="enter title in small letters" />
+                            <div id="titleWarning" class="form-text text-danger"></div>
+                        </div>
+                        
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="person2" class="form-label">Accompanying Person 2</label>
-                    <input type="text" class="form-control" id="person2" name="person2">
-                </div>
-                <div class="col-md-6">
-                    <label for="relation2" class="form-label">Relation 2</label>
-                    <input type="text" class="form-control" id="relation2" name="relation2">
-                </div>
-            </div>
+                        <!-- Authors -->
+                        <div class="mb-3">
+                            <label for="authors" class="form-label">Author(s) <span class="text-muted">(follow spacing: A. Author (1,2) B. Writer (1,2))</span></label>
+                            <input type="text" class="form-control" id="authors" name="authors" placeholder="e.g. A. Aman (1)  B. Bman (1,2)">
+                        </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="person3" class="form-label">Accompanying Person 3</label>
-                    <input type="text" class="form-control" id="person3" name="person3">
-                </div>
-                <div class="col-md-6">
-                    <label for="relation3" class="form-label">Relation 3</label>
-                    <input type="text" class="form-control" id="relation3" name="relation3">
-                </div>
-            </div>
+                        <!-- Abstract Text -->
+                        <div class="mb-3">
+                            <label for="abstractText" class="form-label">Text of Abstract <span class="text-muted">(max 250 words)</span></label>
+                            <textarea class="form-control" id="abstractText" name="abstract_text" rows="6" oninput="countAbstractWords()"></textarea>
+                            <div id="abstractWordCount" class="form-text"></div>
+                        </div>
 
-            <!-- Email and OTP -->
-            <div class="row mb-3 align-items-end">
-                <div class="col-md-9">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="col-md-3 d-grid">
-                    <button type="button" class="btn btn-outline-primary mt-md-4" id="sendOtpBtn">Send OTP</button>
-                </div>
-            </div>
+                        <!-- Editable Abstract File Upload -->
+                        
 
-            <div class="row mb-3 align-items-end">
-                <div class="col-md-9">
-                    <label for="otp" class="form-label">Enter OTP</label>
-                    <input type="text" class="form-control" id="otp" name="otp" required>
-                </div>
-                <div class="col-md-3 d-grid">
-                    <button type="button" class="btn btn-outline-success mt-md-4" id="verifyOtpBtn">Verify OTP</button>
-                </div>
-            </div>
-
-            <div class="mb-3 text-center text-success fw-bold" id="otpStatus"></div>
-
-            <!-- Submit -->
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Submit</button>
-            </div>
-        </form>
-    </div>
-</section>
+                    </div>
 
 
-<section class="section pt-0 pb-0">
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title white">
-                    <h2>Conference <span class="alternate">Fee</span></h2>
-                </div>
-            </div>
+
+                    <!-- Email and OTP -->
+                    <div class="row mb-3 align-items-end">
+                        <div class="col-md-9">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="col-md-3 d-grid">
+                            <button type="button" class="btn btn-outline-primary mt-md-4" id="sendOtpBtn">Send OTP</button>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-end">
+                        <div class="col-md-9">
+                            <label for="otp" class="form-label">Enter OTP</label>
+                            <input type="text" class="form-control" id="otp" name="otp" required>
+                        </div>
+                        <div class="col-md-3 d-grid">
+                            <button type="button" class="btn btn-outline-success mt-md-4" id="verifyOtpBtn">Verify OTP</button>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 text-center text-success fw-bold" id="otpStatus"></div>
+
+                    <!-- Submit -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Submit</button>
+                    </div>
+            </form>
         </div>
-        <!-- Registration Timeline -->
-        <div class="container text-center mt-4">
-            <div class="btn-group mb-4" role="group">
-                <button type="button" class="btn btn-outline-primary active" onclick="selectPeriod('early')">Early (Till 30th Sept 2025)</button>
-                <button type="button" class="btn btn-outline-primary" onclick="selectPeriod('regular')">Regular (Till 20th Oct 2025)</button>
-                <button type="button" class="btn btn-outline-primary" onclick="selectPeriod('late')">Late/On-Spot</button>
-            </div>
-        </div>
-
-        <!-- Table (Keep your existing table here) -->
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-bordered text-center table-striped" id="feeTable">
-                    <thead class="thead-light">
-                        <tr>
-                            <th>Select</th>
-                            <th>Categories of Delegates</th>
-                            <th>Early Registration<br>INR</th>
-                            <th>Regular Registration<br>INR</th>
-                            <th>Late/On Spot Registration<br>INR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="radio" name="feeOption"></td>
-                            <td>IVS Members</td>
-                            <td>7000</td>
-                            <td>8000</td>
-                            <td>8500</td>
-                        </tr>
-                        <tr>
-                            <td><input type="radio" name="feeOption"></td>
-                            <td>Non IVS Members</td>
-                            <td>8000</td>
-                            <td>9000</td>
-                            <td>9500</td>
-                        </tr>
-                        <tr>
-                            <td><input type="radio" name="feeOption"></td>
-                            <td>Students/Research Fellows</td>
-                            <td>4000</td>
-                            <td>5000</td>
-                            <td>5500</td>
-                        </tr>
-                        <tr>
-                            <td><input type="radio" name="feeOption"></td>
-                            <td>Industry/Corporate</td>
-                            <td>12000</td>
-                            <td>15000</td>
-                            <td>20000</td>
-                        </tr>
-                        <tr>
-                            <td><input type="radio" name="feeOption"></td>
-                            <td>Accompanying Person (kit will not be provided)</td>
-                            <td>4000</td>
-                            <td>5000</td>
-                            <td>5500</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <label id="dateLabel" class="d-block text-center font-weight-bold">Loading current date...</label>
-            </div>
-        </div>
-    </div>
+    </section>
 
 
-    <!-- Pay Button -->
-    <div class="text-center mt-4">
-        <button id="payButton" class="btn btn-success btn-lg" disabled>Pay Now</button>
-    </div>
+  
 
-    <!-- Razorpay script -->
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- ✅ Bootstrap 5 JS (needed for dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- For hiding box section -->
     <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.disabled = true;
-            submitBtn.innerText = 'Submitting...';
-        });
-        let otpVerified = false;
+        const attemptingSelect = document.getElementById('Attempting');
+        const fileUploadBox = document.getElementById('fileUploadBox');
+        const payButton = document.getElementById('payButton');
+        const fileInput = document.getElementById('presentationFile');
+        const fileError = document.getElementById('fileError');
 
-        document.getElementById('sendOtpBtn').addEventListener('click', () => {
-            const email = document.getElementById('email').value;
-            if (!email) return alert('Please enter your email');
+        attemptingSelect.addEventListener('change', function() {
+            const value = this.value;
 
-            fetch('send_otp.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: 'email=' + encodeURIComponent(email)
-                })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.status === 'OTP Sent') {
-                        alert('OTP sent to your email.');
-                    } else {
-                        alert(data.error);
-                    }
-                });
-        });
-
-        document.getElementById('verifyOtpBtn').addEventListener('click', () => {
-            const otp = document.getElementById('otp').value;
-            const email = document.getElementById('email').value;
-
-            fetch('verify_otp.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: 'otp=' + encodeURIComponent(otp) + '&email=' + encodeURIComponent(email)
-                })
-                .then(res => res.json())
-                .then(data => {
-                    const statusDiv = document.getElementById('otpStatus');
-                    if (data.status === 'verified') {
-                        otpVerified = true;
-                        statusDiv.textContent = 'OTP Verified';
-                        document.getElementById('submitBtn').disabled = false;
-                    } else {
-                        statusDiv.textContent = 'OTP Incorrect';
-                        document.getElementById('submitBtn').disabled = true;
-                    }
-                });
-        });
-    </script>
-
-    <script>
-        let selectedPeriod = 'early';
-        let selectedAmount = 0;
-        let selectedCategory = '';
-
-        // Called on page load
-        window.onload = function() {
-            const today = new Date();
-            const earlyDeadline = new Date("2025-09-30");
-            const regularDeadline = new Date("2025-10-20");
-            const options = {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            };
-            const formattedDate = today.toLocaleDateString('en-IN', options);
-            document.getElementById("dateLabel").textContent = "Today: " + formattedDate;
-
-            // Determine current period
-            if (today <= earlyDeadline) {
-                selectedPeriod = 'early';
-            } else if (today <= regularDeadline) {
-                selectedPeriod = 'regular';
+            if (value === 'participants') {
+                fileUploadBox.style.display = 'none';
+                payButton.disabled = false;
+            } else if (value === 'Presenter') {
+                fileUploadBox.style.display = 'block';
+                payButton.disabled = true; // Payment only for participants
             } else {
-                selectedPeriod = 'late';
+                fileUploadBox.style.display = 'none';
+                payButton.disabled = true;
             }
+        });
 
-            // Set active button
-            const buttons = document.querySelectorAll(".btn-group .btn");
-            buttons.forEach(btn => {
-                btn.classList.remove("active");
-                if (btn.textContent.toLowerCase().includes(selectedPeriod)) {
-                    btn.classList.add("active");
-                } else {
-                    btn.disabled = true;
+        // Optional: Validate file on selection
+        fileInput.addEventListener('change', function() {
+            const file = this.files[0];
+            fileError.textContent = '';
+
+            if (file) {
+                const fileSizeMB = file.size / (1024 * 1024);
+                const fileType = file.name.split('.').pop().toLowerCase();
+
+                if (fileSizeMB > 5) {
+                    fileError.textContent = 'File size must be under 5MB.';
+                    this.value = '';
+                } else if (!['pdf', 'docx'].includes(fileType)) {
+                    fileError.textContent = 'Only .pdf or .docx files are allowed.';
+                    this.value = '';
                 }
-            });
-
-            const periodIndex = {
-                early: 2,
-                regular: 3,
-                late: 4
-            };
-
-            const currentIndex = periodIndex[selectedPeriod];
-
-            // Handle radio selection
-            const rows = document.querySelectorAll("#feeTable tbody tr");
-            rows.forEach(row => {
-                const radio = row.querySelector("input[type='radio']");
-                const amountCell = row.children[currentIndex];
-
-                // Style non-current period cells
-                for (let i = 2; i <= 4; i++) {
-                    if (i !== currentIndex) {
-                        row.children[i].style.color = "#999";
-                        row.children[i].style.pointerEvents = "none";
-                    } else {
-                        row.children[i].style.fontWeight = "bold";
-                    }
-                }
-
-                radio.addEventListener("change", function() {
-                    // Clear highlight from all rows
-                    rows.forEach(r => r.classList.remove("table-primary"));
-
-                    // Highlight selected row
-                    if (radio.checked) {
-                        row.classList.add("table-primary");
-                        selectedAmount = parseInt(amountCell.innerText);
-                        selectedCategory = row.children[1].innerText;
-                        document.getElementById("payButton").disabled = false;
-                    }
-                });
-            });
-        };
-
-
-        // Pay button handler
-        document.getElementById("payButton").addEventListener("click", function() {
-            if (selectedAmount <= 0) {
-                alert("Please select a valid category.");
-                return;
             }
+        });
 
-            const options = {
-                "key": "rzp_test_aRRY41tkiwfWbk", // Replace with your Razorpay key
-                "amount": selectedAmount * 100,
-                "currency": "INR",
-                "name": "VIROCON 2025",
-                "description": selectedCategory + " - " + selectedPeriod.toUpperCase(),
-                "handler": function(response) {
-                    alert("Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
-                },
-                "theme": {
-                    "color": "#28a745"
+
+        const abstractFields = document.getElementById('abstractFields');
+        const abstractTitle = document.getElementById('abstractTitle');
+        const abstractText = document.getElementById('abstractText');
+        const abstractFileInput = document.getElementById('abstractFile');
+
+        attemptingSelect.addEventListener('change', function() {
+            const value = this.value;
+
+            if (value === 'Presenter') {
+                fileUploadBox.style.display = 'block';
+                abstractFields.style.display = 'block';
+            } else {
+                fileUploadBox.style.display = 'none';
+                abstractFields.style.display = 'none';
+            }
+        });
+
+        function validateTitle() {
+            const title = abstractTitle.value.trim();
+            const wordCount = title.split(/\s+/).filter(Boolean).length;
+            const warning = document.getElementById('titleWarning');
+
+            if (title !== title.toLowerCase()) {
+                warning.textContent = "Title must be in small letters.";
+            } else if (wordCount > 25) {
+                warning.textContent = "Title exceeds 25-word limit.";
+            } else {
+                warning.textContent = "";
+            }
+        }
+
+        function countAbstractWords() {
+            const text = abstractText.value.trim();
+            const wordCount = text.split(/\s+/).filter(Boolean).length;
+            const wordDisplay = document.getElementById('abstractWordCount');
+
+            if (wordCount > 250) {
+                wordDisplay.innerHTML = `<span class="text-danger">⚠️ Word count: ${wordCount} / 250 (Too long)</span>`;
+            } else {
+                wordDisplay.innerHTML = `Word count: ${wordCount} / 250`;
+            }
+        }
+
+        // Abstract file validation
+        abstractFileInput.addEventListener('change', function() {
+            const file = this.files[0];
+            const errorDiv = document.getElementById('abstractFileError');
+            errorDiv.textContent = '';
+
+            if (file) {
+                const sizeMB = file.size / (1024 * 1024);
+                const extension = file.name.split('.').pop().toLowerCase();
+
+                if (sizeMB > 5) {
+                    errorDiv.textContent = 'File size exceeds 5MB.';
+                    this.value = '';
+                } else if (extension !== 'docx') {
+                    errorDiv.textContent = 'Only .docx format is allowed.';
+                    this.value = '';
                 }
-            };
-
-            const rzp = new Razorpay(options);
-            rzp.open();
+            }
         });
     </script>
 
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <div class="section-title white text-center">
-                <h2>Fee <span class="alternate">Payment</span></h2>
-            </div>
-            <p class="text-center mb-4">The registration fee should be paid into the Indian Virological Society (IVS) account as per the details given below.</p>
-
-            <div class="table-responsive mx-auto" style="max-width: 1000px;">
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <th style="width: 40%;">Account Number</th>
-                            <td>91532010005056</td>
-                        </tr>
-                        <tr>
-                            <th>Bank</th>
-                            <td>Canara Bank</td>
-                        </tr>
-                        <tr>
-                            <th>Branch Name</th>
-                            <td>NASC, PUSA CAMPUS, DELHI</td>
-                        </tr>
-                        <tr>
-                            <th>IFSC Code</th>
-                            <td>CNRB0019153</td>
-                        </tr>
-                        <tr>
-                            <th>Branch Code</th>
-                            <td>19153</td>
-                        </tr>
-                        <tr>
-                            <th>Payment Remarks</th>
-                            <td>Please add <strong>“VIROCON”</strong> to the payment remarks section for verification.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
 
 
-<?php include 'INCLUDE/footer.php' ?>
+
+
+    <?php include 'INCLUDE/footer.php' ?>

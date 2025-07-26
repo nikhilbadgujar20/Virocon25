@@ -1,7 +1,19 @@
 <?php
-
-  session_start();
+session_start();
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header('Location: login.php');
+    exit();
   require_once 'auth.php';
+}
+
+$timeout = 1800; // 30 minutes
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $timeout) {
+    session_unset();
+    session_destroy();
+    header("Location: login.php");
+    exit();
+}
+$_SESSION['LAST_ACTIVITY'] = time();
 
   // ✅ DB connection
   $mysqli = new mysqli("localhost", "root", "root", "virocon");
@@ -180,6 +192,9 @@
   </div>
 
   <script>
+    window.addEventListener("beforeunload", function () {
+    navigator.sendBeacon('logout.php');
+});
     $(document).on('click', '.act-btn', function() {
       const id = $(this).data('id');
       const action = $(this).data('action');

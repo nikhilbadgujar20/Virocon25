@@ -74,7 +74,7 @@
 										</div>
 									</div> -->
 										<div class="invitation-section text-justify">
-											<h2>Invitation to VIROCON-2025</h2>
+											<h3>Invitation to VIROCON-2025</h3>
 											<p>Dear Colleague,</p>
 											<p>Greetings from ICMR-National Institute of Virology, Pune, and the
 												Organizing Committee of VIROCON 2025!</p>
@@ -106,7 +106,7 @@
 							<div class="container">
 								<div class="row mt-5">
 									<div class="col-12">
-										<h4 class=" mb-4">Core Committee</h4>
+										<h3 class=" mb-4">Core Committee</h3>
 										<ul class="list-group mb-5">
 											<li class="list-group-item"><strong>Dr Naveen Kumar</strong>, Director,
 												ICMR-NIV</li>
@@ -117,7 +117,7 @@
 											<li class="list-group-item"><strong>Dr. B Anukumar</strong>, Scientist ‘F’</li>
 											<li class="list-group-item"><strong>Dr. Yogesh K. Gurav</strong>,Scientist ‘F’</li>
 											<li class="list-group-item"><strong>Dr. Gajanan N Sapkal</strong>, Scientist ‘F’</li>
-											<li class="list-group-item"><strong>Mrs. Shibi Jacob</strong>, Senior Administrative Officer</li>
+
 										</ul>
 
 									</div>
@@ -129,39 +129,39 @@
 							<div class="container">
 								<div class="row mt-5">
 									<div class="col-12">
-										<h4 class=" mb-4">Organising Committee</h4>
+										<h3 class=" mb-4">Organising Committee</h3>
 										<ul class="list-group mb-5">
 											<P><B>PATRON </B></P>
-											<li class="list-group-item"><strong>Dr. Rajiv Bahl</strong>, DG,
+											<li class="list-group-item"><strong>Dr. Rajiv Bahl</strong><br>Secretary DHR & DG,
 												Indian Council of Medical Research</li>
 											<!--<li class="list-group-item"><strong>Dr.-----------</strong>,##### </li> -->
 											<hr />
 											<P><B>CHAIRMAN </B></P>
-											<li class="list-group-item"><strong>Dr. Naveen Kumar</strong>, Director, ICMR-National Institute of Virology, Pune</li>
-											
-										
+											<li class="list-group-item"><strong>Dr. Naveen Kumar</strong><br> Director, ICMR-National Institute of Virology, Pune</li>
+
+
 											<hr />
 											<P><B>ORGANIZING SECRETARY </B></P>
-											<li class="list-group-item"><strong>Dr. B V Tandale</strong>, Scientist ‘G’, ICMR-NIV</li>
+											<li class="list-group-item"><strong>Dr. B V Tandale</strong><br> Scientist ‘G’, ICMR-NIV</li>
 											<hr />
 											<P><B>CO-ORGANIZING SECRETARY </B></P>
-											<li class="list-group-item"><strong>Dr. Vijay P. Bondre</strong>, Scientist ‘G’, ICMR-NIV</li>
-											<li class="list-group-item"><strong>Dr. Balkrushna Anukumar</strong>, Scientist ‘F’, ICMR-NIV</li>
+											<li class="list-group-item"><strong>Dr. Vijay P. Bondre</strong><br> Scientist ‘G’, ICMR-NIV</li>
+											<li class="list-group-item"><strong>Dr. Balkrushna Anukumar</strong><br> Scientist ‘F’, ICMR-NIV</li>
 											<hr />
 											<P><B>TREASURER</B></P>
-											<li class="list-group-item"><strong>Dr. Yogesh K. Gurav</strong>,Scientist ‘F’, ICMR-NIV</li>
-											<li class="list-group-item"><strong>Dr. Kanchankumar P. Patil</strong>, Scientist ‘E’, ICMR-NIV</li>
+											<li class="list-group-item"><strong>Dr. Yogesh K. Gurav</strong><br>Scientist ‘F’, ICMR-NIV</li>
+											<li class="list-group-item"><strong>Dr. Kanchankumar P. Patil</strong><br> Scientist ‘E’, ICMR-NIV</li>
 											<hr />
-											
+
 											<P><B>IVS EXECUTIVE COMMITTEE </B></P>
-											<li class="list-group-item"><strong>Prof R K Ratho</strong>, President </li>
-											<li class="list-group-item"><strong>Prof R Selvarajan</strong>, Vice President (Plant Virology) </li>
-											<li class="list-group-item"><strong>Dr. A K Bagga</strong>, Vice President (Medical Virology)</li>
-											<li class="list-group-item"><strong>Prof (Dr) Indrani Karunasagar</strong>, Vice President (Veterinary Virology)</li>
-											<li class="list-group-item"><strong>Prof (Dr) Yashpal S Malik</strong>, Secretary General </li>
-											<li class="list-group-item"><strong>Dr. Celia Chalam Vasimalla</strong>, Secretary (Plant Virology) </li>
-											<li class="list-group-item"><strong>Prof (Dr) Shailendra K Saxena</strong>, Secretary (Medical Virology) </li>
-											<li class="list-group-item"><strong>Dr. Baldev R Gulati</strong>, Secretary (Veterinary Virology) </li>
+											<li class="list-group-item"><strong>Prof R K Ratho</strong><br> President </li>
+											<li class="list-group-item"><strong>Prof R Selvarajan</strong><br> Vice President (Plant Virology) </li>
+											<li class="list-group-item"><strong>Dr. A K Bagga</strong><br> Vice President (Medical Virology)</li>
+											<li class="list-group-item"><strong>Prof (Dr) Indrani Karunasagar</strong><br>Vice President (Veterinary Virology)</li>
+											<li class="list-group-item"><strong>Prof (Dr) Yashpal S Malik</strong><br> Secretary General </li>
+											<li class="list-group-item"><strong>Dr. Celia Chalam Vasimalla</strong><br> Secretary (Plant Virology) </li>
+											<li class="list-group-item"><strong>Prof (Dr) Shailendra K Saxena</strong><br> Secretary (Medical Virology) </li>
+											<li class="list-group-item"><strong>Dr. Baldev R Gulati</strong><br> Secretary (Veterinary Virology) </li>
 										</ul>
 									</div>
 								</div>
@@ -175,7 +175,7 @@
 										<h5 class="fw-bold">Conference Dates</h5>
 										<p class="text-muted">
 											Mark your calendars! The highly anticipated VIROCON – 2025 will take
-											place from <strong>10th to 12th December, 2025</strong>. Join us for an
+											place from <strong>08th to 10th December, 2025</strong>. Join us for an
 											enriching experience filled with insightful sessions and networking
 											opportunities.
 										</p>
@@ -185,14 +185,14 @@
 										<h5 class="fw-bold">Registration Deadlines</h5>
 										<ul class="ml-3">
 											<li><strong>Early Registration Deadline:</strong> Secure your spot at
-												VIROCON – 2025 by registering before <strong>31st July,
+												VIROCON – 2025 by registering before <strong>15th September,
 													2025</strong>. Take advantage of discounted rates and ensure
 												your participation in this premier event.</li>
 											<li class="mt-2"><strong>Regular Registration Deadline:</strong>Secure your spot at VIROCON – 2025 by registering before
-												<strong>30th October, 2025</strong>. Avail the standard registration
+												<strong>15th October, 2025</strong>. Avail the standard registration
 												rates and guarantee your attendance.
 											</li>
-											<li class="mt-2"><strong>The-Spot Registration will not be available.</strong>
+											<li class="mt-2"><strong>Late Registration: Complete Your Registration On or Before<strong>05th November, 2025</strong></strong>
 											</li>
 										</ul>
 									</li>
@@ -221,106 +221,14 @@
 											After successful submission of the registration form and payment of the
 											registration fee as per the applicable deadlines, participants who wish
 											to present their research should complete the abstract submission form.
-											The last date for abstract submission is <strong>---Date----</strong>. Please ensure that your abstract is submitted by this
+											The last date for abstract submission is <strong>25th August 2025</strong>. Please ensure that your abstract is submitted by this
 											date to allow sufficient time for review.
 										</p>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<div class="tab-pane fade schedule-item" id="contact">
-							<!-- Headings -->
-							<div class="container">
-								<h2 class="text-center mb-4">Contact Us</h2>
-								<div class="row mb-2">
-									<div class="col-md-4 mb-4">
-										<div class="card h-100">
-											<div class="card-body">
-												<h5 class="card-title"><strong>Dr. B V Tandale</strong></h5>
-												<p class="card-text">Organizing Secretary,</p>
-												<p> VIROCON-2025</p>
-												<p class="card-text">
-													<a href="mailto:virocon2024@gmail.com"
-														style="color: black;">virocon2025@gmail.com</a>;
-													
-												</p>
-												<p class="card-text">
-													020-26006290; 020-25906890
-												</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 mb-4">
-										<div class="card h-100">
-											<div class="card-body">
-												<h5 class="card-title"><strong>Dr. Sarah S Cherian</strong></h5>
-												<p class="card-text">Scientist ‘G’,ICMR-NIV</p>
-												<p class="card-text">
-													+91-0000000000; +91-0000000000
-												</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 mb-4">
-										<div class="card h-100">
-											<div class="card-body">
-												<h5 class="card-title"><strong>Dr. B Anukumar</strong></h5>
-												<p class="card-text">Scientist ‘F’, ICMR-NIV</p>
-												<p class="card-text">
-													+91-0000000000;
-												</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 mb-4">
-										<div class="card h-100">
-											<div class="card-body">
-												<h5 class="card-title"><strong>Dr. Vijay P. Bondre</strong></h5>
-												<p class="card-text">Scientist 'G', ICMR-NIV</p>
-												<p> VIROCON-2025</p>
-												<p class="card-text">
-													<a href="mailto:virocon2024@gmail.com"
-														style="color: black;">virocon2025@gmail.com</a>;
-													
-												</p>
-												<p class="card-text">
-													020-26006290; 020-25906890
-												</p>
-											</div>
-										</div>
-									</div>
-</div>
-								<!--<h5 class="mb-4">For accommodation assistance:</h5>-->
-								<!-- <div class="row">
-										<div class="col-md-6 mb-4">
-											<div class="card h-100">
-												<div class="card-body">
-													<h5 class="card-title"><strong>Dr. Jyoti S Kumar</strong></h5>
-													<p><strong>For technical assistance:</strong></p>
-													<p class="card-text">Scientist ‘F’, DRDE</p>
-													<p class="card-text">
-														+91-751-2390292; 94065-81897
-													</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-6 mb-4">
-											<div class="card h-100">
-												<div class="card-body">
-													<h5 class="card-title"><strong>Dr. Sachin Tikar</strong></h5>
-													<p><strong>For accommodation assistance:</strong></p>
-													<p class="card-text">Scientist ‘F’, DRDE</p>
-													<p class="card-text">
-														+91-751-2390140; 94257-02085
-													</p>
-												</div>
-											</div>
-										</div>
-									</div> -->
-							</div>
-						</div>
 						<div class="tab-pane fade schedule-item" id="awards">
-							<!-- Headings -->
 							<div class="container text-center">
 								<ul class="list-unstyled mx-auto" style="max-width: 600px;">
 									<li class="mb-2">
@@ -345,7 +253,7 @@
 
 											<b>Best Poster Award </b>: This award honors the best posters presented. The best poster will be decided by a panel of jury members and is evaluated based on the presentation's content and clarity, originality, communication, scientific aspects, relevance to the field, analysis, and description of results.
 
-											<hr/>The award ceremony for the Best Paper and Best Poster awards will take place during the valedictory function
+											<hr />The award ceremony for the Best Paper and Best Poster awards will take place during the valedictory function
 
 										</p>
 									</li>
@@ -353,11 +261,83 @@
 
 							</div>
 						</div>
+						<div class="tab-pane fade schedule-item" id="contact">
+							<div class="container">
+								<h3 class="text-center mb-4">Contact Us</h3>
+
+								<div class="row mb-2">
+									<!-- Dr. B V Tandale -->
+									<div class="col-md-4 mb-4">
+										<div class="card h-100">
+											<div class="card-body">
+												<h5 class="card-title"><strong>Dr. B V Tandale</strong></h5>
+												<p class="card-text">Organizing Secretary,</p>
+												<p class="card-text">VIROCON-2025</p>
+												<p class="card-text">
+													<a href="mailto:regvirocon.2025@gmail.com" style="color: black;">virocon.2025@gmail.com</a>
+												</p>
+												<p class="card-text">020-26006290<br>020-25906890</p>
+											</div>
+										</div>
+									</div>
+
+									<!-- Dr. Sarah S Cherian -->
+									<div class="col-md-4 mb-4">
+										<div class="card h-100">
+											<div class="card-body">
+												<h5 class="card-title"><strong>Dr. Sarah S Cherian</strong></h5>
+												<p class="card-text">Scientist ‘G’, ICMR-NIV</p>
+												<p class="card-text">VIROCON-2025</p>
+												<p class="card-text">
+													<a href="mailto:regvirocon.2025@gmail.com" style="color: black;">virocon.2025@gmail.com</a>
+												</p>
+												<p class="card-text">020-26006290<br>020-25906890</p>
+											</div>
+										</div>
+									</div>
+
+									<!-- Dr. B Anukumar -->
+									<div class="col-md-4 mb-4">
+										<div class="card h-100">
+											<div class="card-body">
+												<h5 class="card-title"><strong>Dr. B Anukumar</strong></h5>
+												<p class="card-text">Scientist ‘F’, ICMR-NIV</p>
+												<p class="card-text">VIROCON-2025</p>
+												<p class="card-text">
+													<a href="mailto:regvirocon.2025@gmail.com" style="color: black;">virocon.2025@gmail.com</a>
+												</p>
+												<p class="card-text">020-26006290<br>020-25906890</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<!-- Dr. Vijay P. Bondre (only once) -->
+									<div class="col-md-4 mb-4">
+										<div class="card h-100">
+											<div class="card-body">
+												<h5 class="card-title"><strong>Dr. Vijay P. Bondre</strong></h5>
+												<p class="card-text">Scientist 'G', ICMR-NIV</p>
+												<p class="card-text">VIROCON-2025</p>
+												<p class="card-text">
+													<a href="mailto:regvirocon.2025@gmail.com" style="color: black;">virocon.2025@gmail.com</a>
+												</p>
+												<p class="card-text">020-26006290<br>020-25906890</p>
+											</div>
+										</div>
+									</div>
+									<!-- Add more team members here in same row if needed -->
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
-
 			</div>
 		</div>
+	</div>
+	</div>
 	</div>
 </section>
 

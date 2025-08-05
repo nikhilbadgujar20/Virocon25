@@ -30,14 +30,14 @@
 					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link" href="#registration" data-toggle="pill">
-							Registration
+							Registration & Abstract Submission
 					    </a>
 					  </li> 
-					  <li class="nav-item">
+					 <!-- <li class="nav-item">
 					    <a class="nav-link" href="#abstractsubmission" data-toggle="pill">
 							Abstract Submission
 					    </a>
-					  </li>
+					  </li> -->
 					</ul>
 				</div>
 				<div class="schedule-contents about">
@@ -53,9 +53,9 @@
 										<li class="list-group-item">
 											<strong>1. Registration Categories:</strong>
 											<ul>
-												<li>Early Registration: Available Till 15th September, 2025.</li>
-												<li>Regular Registration: Available Till 15th October, 2025.</li>
-												<li>Late/On-site Registration: Available Till 05th November 2025.</li>
+												<li>Early Registration: Available till 15th September, 2025.</li>
+												<li>Regular Registration: Available till 15th October, 2025.</li>
+												<li>Late/On-site Registration: Available till 05th November 2025.</li>
 												<li>Categories: IVS Members/ Non IVS Members/ Students/ Research Fellows/ Industry/ Corporate/ Accompanying Person.</li>
 											</ul>
 										</li>
@@ -140,8 +140,8 @@
 											<thead class="thead-light">
 												<tr>
 													<th class="align-middle text-center">Categories of Delegates</th>
-													<th class="align-middle text-center">Early Registration<br>(Till 15th Sept 2024)<br>INR</th>
-													<th class="align-middle text-center">Regular Registration<br>(Till 15th Oct 2024)<br>INR</th>
+													<th class="align-middle text-center">Early Registration<br>(till 15th Sept 2024)<br>INR</th>
+													<th class="align-middle text-center">Regular Registration<br>(till 15th Oct 2024)<br>INR</th>
 													<th class="align-middle text-center">Late/On Spot Registration<br>INR</th>
 												</tr>
 											</thead>
@@ -187,33 +187,33 @@
 									<div class="section-title white">
 										<h2>Fee <span class="alternate">Payment</span></h2>
 									</div>
-									<p class="ml-3">The registration fee should be paid in the Indian Virological Society (IVS) account as per the details given below.</p>
+									<p class="ml-3">The registration fee should be paid in the ICMR-National Institute of Virology (ICMR-NIV) account as per the details given below.</p>
 									<div class="table-responsive">
 										<table class="table table-bordered text-center table-striped">
 											<tbody>
 												<tr>
 													<th>Account Number</th>
-													<td>91532010005056</td>
+													<td>xxxxxxxxxx</td>
 												</tr>
 												<tr>
 													<th>Bank</th>
-													<td>Canara bank</td>
+													<td>SBI</td>
 												</tr>
 												<tr>
 													<th>Branch Name</th>
-													<td>NASC, PUSA CAMPUS, DELHI</td>
+													<td>Pune</td>
 												</tr>
 												<tr>
 													<th>IFSC Code</th>
-													<td>CNRB0019153</td>
+													<td>SBIxxx</td>
 												</tr>
 												<tr>
 													<th>Branch Code</th>
-													<td>19153</td>
+													<td>xxxx</td>
 												</tr>
 												<tr>
 													<th>Payment Remarks</th>
-													<td>Please add “VIROCON” to Payment Remarks section for verification.</td>
+													<td>Please add “VIROCON 2025” to Payment Remarks section for verification.</td>
 												</tr>
 											</tbody>
 										</table>
@@ -230,14 +230,14 @@
 									<div class="registration-card">
 										<h2>Register <span class="alternate">Now!</span></h2>
 									<p>Please click the button below to register for the event.</p>
-									<a href="register-form.php"  class="btn"><h5>Register Here</h5></a>
+									<a href="registration"  class="btn"><h5>Register Here</h5></a>
 										</a>
 									</div>
 								</div>
 							</div>
 						</div>
 					  </div>
-					  <div class="tab-pane fade schedule-item" id="abstractsubmission">
+				<!-- <div class="tab-pane fade schedule-item" id="abstractsubmission">
 						<div class="container">
 							<div class="row justify-content-center">
 								<div class="col-lg-5 col-md-6 col-sm-10 d-flex align-items-stretch mb-4">
@@ -248,8 +248,8 @@
 									</div>
 								</div>
 							</div>
-						</div>
-					  </div>
+						</div> 
+					  </div>  -->
 					</div>
 				</div>
 				
@@ -273,14 +273,14 @@
 				<div class="content-block">
 					<h2>Register Yourself <span class="alternate">Now!</span></h2>
 					<p>Please click the button below to register for the event.</p>
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSfHYJUquRWsA82sgLhLhQBKPWgHjFMsmXmYB1NNu90Ao44r_g/viewform?usp=sf_link" target="_blank" class="btn btn-main-md">Register</a>
+					<a href="registration.php" class="btn btn-main-md">Register</a>
 				</div>
 			</div>
-			<div class="col-md-3 banner p-0">
-				<!-- Content Block -->
-				<div class="block content-block">
-					<!-- Coundown Timer -->
-					<div class="timer"></div>
+		<div class="col-md-3 banner p-0">
+		<!-- Content Block -->
+		<div class="block content-block">
+		<!-- Coundown Timer -->
+		<div class="timer"></div>
 		</div>
 		</div>
 	</div>

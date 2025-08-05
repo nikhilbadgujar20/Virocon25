@@ -1,106 +1,67 @@
+<link rel="stylesheet" href="css/dashboard.css">
 <?php
-session_start();
-if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    header('Location: login.php');
-    exit();
-  require_once 'auth.php';
+
+// dashboard.php
+require_once 'auth.php';
+
+$mysqli = new mysqli("localhost", "root", "virocon2025", "virocon");
+if ($mysqli->connect_errno) {
+  die("❌ DB Connection Failed: " . $mysqli->connect_error);
 }
 
-$timeout = 1800; // 30 minutes
-if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $timeout) {
-    session_unset();
-    session_destroy();
-    header("Location: login.php");
-    exit();
+$limit = 10;
+$page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int) $_GET['page'] : 1;
+$offset = ($page - 1) * $limit;
+
+$statusFilter = isset($_GET['status']) ? $_GET['status'] : '';
+$searchQuery = isset($_GET['search']) ? trim($_GET['search']) : '';
+
+$allowedStatuses = ['accepted_oral', 'accepted_poster', 'rejected', 'pending'];
+$whereSQL = '';
+
+// Status filter
+if ($statusFilter && in_array($statusFilter, $allowedStatuses)) {
+  $whereSQL .= " status = '" . $mysqli->real_escape_string($statusFilter) . "'";
 }
-$_SESSION['LAST_ACTIVITY'] = time();
 
-  // ✅ DB connection
-  $mysqli = new mysqli("localhost", "root", "root", "virocon");
+// Search filter
+if (!empty($searchQuery)) {
+  $escapedSearch = $mysqli->real_escape_string($searchQuery);
+  $searchCondition = "(registration_number LIKE '%$escapedSearch%' OR CONCAT(first_name, ' ', last_name) LIKE '%$escapedSearch%' OR email LIKE '%$escapedSearch%')";
+  $whereSQL .= ($whereSQL ? " AND " : "") . $searchCondition;
+}
 
-  // ✅ Check connection
-  if ($mysqli->connect_errno) {
-    die("❌ Failed to connect to MySQL: " . $mysqli->connect_error);
-  }
+// Combine into WHERE clause
+if (!empty($whereSQL)) {
+  $whereSQL = " WHERE " . $whereSQL;
+}
 
-  // ✅ Pagination setup
-  $limit = 10;
-  $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int) $_GET['page'] : 1;
-  $offset = ($page - 1) * $limit;
+// Get total count
+$totalQuery = $mysqli->query("SELECT COUNT(*) AS total FROM register $whereSQL");
+$totalRows = $totalQuery->fetch_assoc()['total'];
+$totalPages = ceil($totalRows / $limit);
 
-  // ✅ Total rows count
-  $totalQuery = $mysqli->query("SELECT COUNT(*) AS total FROM register");
-  $totalRows = $totalQuery->fetch_assoc()['total'];
-  $totalPages = ceil($totalRows / $limit);
-
-  // ✅ Fetch paginated rows
-  $sql = "SELECT id, title, gender, first_name, last_name, organization, delegate_type,
-        nature_of_delegate, postal_address, city, pin_code, state, country,
-        telephone_no, mobile_no, email, no_of_accompanying_persons, payment_amount,
-        status, created_at
-        FROM register
-        ORDER BY created_at ASC
-        LIMIT $limit OFFSET $offset";
-
-  $result = $mysqli->query($sql);
-
-  // Fetch all relevant fields from register table
-  $result = $mysqli->query("SELECT id, title, gender, first_name, last_name, organization, delegate_type,
-        nature_of_delegate, postal_address, city, pin_code, state, country,
-        telephone_no, mobile_no, email, no_of_accompanying_persons, payment_amount,
-        status, created_at FROM register ORDER BY created_at DESC");
-
-
-  // Check if user is logged in
-  if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-      header("Location: login.php");
-      exit;
-  }
-
-  // Auto logout after 1 hour of inactivity
-  $timeout_duration = 3600;
-
-  if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
-      // Session timed out
-      session_unset();
-      session_destroy();
-      header("Location: login.php?timeout=1");
-      exit;
-  }
-
-  $_SESSION['LAST_ACTIVITY'] = time(); // Update last activity timestamp
+// Fetch data
+$sql = "SELECT * FROM register $whereSQL ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
+$result = $mysqli->query($sql);
 ?>
+
 <!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dashboard – Virocon</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <style>
-    /* .scroll-container {
-      max-height: 500px;
-      overflow-y: auto;
-      overflow-x: auto;
-      white-space: nowrap;
-      border: 1px solid #ddd;
-    }
-
-    #regTable th,
-    #regTable td {
-      min-width: 120px;
-      vertical-align: middle;
-    } */
-  </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Virocon Admin</a>
-      <div class="d-flex"><a href="logout.php" class="btn btn-outline-light btn-sm">Logout</a></div>
+      <div class="d-flex"><a href="logout" class="btn btn-outline-light btn-sm">Logout</a></div>
     </div>
   </nav>
 
@@ -108,62 +69,118 @@ $_SESSION['LAST_ACTIVITY'] = time();
     <h3 class="mb-3 text-center">Delegates Registered</h3>
     <hr>
 
+    <!-- Filters -->
+    <div class="row mb-3 align-items-end justify-content-between">
+      <div class="col-md-4">
+        <label for="status_filter" class="form-label">Filter by Status</label>
+        <select id="status_filter" class="form-select">
+          <option value="" <?= $statusFilter === '' ? 'selected' : '' ?>>All Statuses</option>
+          <option value="pending" <?= $statusFilter === 'pending' ? 'selected' : '' ?>>Pending</option>
+          <option value="accepted_oral" <?= $statusFilter === 'accepted_oral' ? 'selected' : '' ?>>Accepted as Oral</option>
+          <option value="accepted_poster" <?= $statusFilter === 'accepted_poster' ? 'selected' : '' ?>>Accepted as Poster</option>
+          <option value="rejected" <?= $statusFilter === 'rejected' ? 'selected' : '' ?>>Rejected</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 ms-auto d-flex justify-content-end gap-2">
+        <input type="text" id="search" class="form-control" value="<?= htmlspecialchars($searchQuery) ?>" placeholder="Registration No, Name or Email" />
+        <button class="btn btn-primary" id="filter_btn">Search</button>
+      </div>
+    </div>
+
     <div class="table-responsive">
-      <table class="table table-bordered table-sm align-middle text-center" id="regTable">
+      <table class="table table-bordered table-sm text-center align-middle table-striped-soft">
         <thead class="table-light">
           <tr>
-            <th>#</th>
-            <th>Title</th>
+            <th>Registration Number</th>
             <th>Name</th>
             <th>Gender</th>
+            <th>Email</th>
+            <th>Mobile</th>
             <th>Organization</th>
             <th>Delegate Type</th>
-            <th>Nature of Delegate</th>
-            <th>Postal Address</th>
-            <th>City</th>
-            <th>Pin Code</th>
-            <th>State</th>
-            <th>Country</th>
-            <th>Telephone</th>
-            <th>Mobile</th>
-            <th>Email</th>
-            <th>Accompanying Persons</th>
-            <th>Amount</th>
             <th>Status</th>
-            <th>Registered At</th>
-            <th>Actions</th>
+            <th>Registered</th>
+            <th>Attempting As</th>
+            <th>Payment Amount</th>
+            <th>Abstract</th>
+            <th>Accepted By</th>
+            <th>Recommendation</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           <?php while ($row = $result->fetch_assoc()): ?>
-            <tr id="row-<?= $row['id'] ?>">
-              <td><?= $row['id'] ?></td>
-              <td><?= htmlspecialchars($row['title']) ?></td>
+            <tr id="row-<?= htmlspecialchars($row['registration_number']) ?>">
+              <td><?= htmlspecialchars($row['registration_number']) ?></td>
               <td><?= htmlspecialchars($row['first_name'] . ' ' . $row['last_name']) ?></td>
               <td><?= htmlspecialchars($row['gender']) ?></td>
-              <td><?= htmlspecialchars($row['organization']) ?></td>
-              <td><?= htmlspecialchars($row['delegate_type']) ?></td>
-              <td><?= htmlspecialchars($row['nature_of_delegate']) ?></td>
-              <td><?= htmlspecialchars($row['postal_address']) ?></td>
-              <td><?= htmlspecialchars($row['city']) ?></td>
-              <td><?= htmlspecialchars($row['pin_code']) ?></td>
-              <td><?= htmlspecialchars($row['state']) ?></td>
-              <td><?= htmlspecialchars($row['country']) ?></td>
-              <td><?= htmlspecialchars($row['telephone_no']) ?></td>
-              <td><?= htmlspecialchars($row['mobile_no']) ?></td>
               <td><?= htmlspecialchars($row['email']) ?></td>
-              <td><?= (int)$row['no_of_accompanying_persons'] ?></td>
-              <td>₹<?= number_format($row['payment_amount'], 2) ?></td>
+              <td><?= htmlspecialchars($row['mobile_no']) ?></td>
+              <td><?= htmlspecialchars($row['organization']) ?></td>
+              <td><?= htmlspecialchars($row['nature_of_delegate']) ?></td>
               <td>
-                <span class="badge bg-<?= $row['status'] === 'accepted' ? 'success' : ($row['status'] === 'rejected' ? 'danger' : 'secondary') ?>">
-                  <?= ucfirst($row['status']) ?>
-                </span>
+                <?php
+                $status = $row['status'];
+                $badgeClass = 'bg-secondary';
+                $statusText = 'Pending';
+                if ($status === 'accepted_oral') {
+                  $badgeClass = 'bg-success';
+                  $statusText = 'Accepted (Oral)';
+                } elseif ($status === 'accepted_poster') {
+                  $badgeClass = 'bg-primary';
+                  $statusText = 'Accepted (Poster)';
+                } elseif ($status === 'rejected') {
+                  $badgeClass = 'bg-danger';
+                  $statusText = 'Rejected';
+                }
+                ?>
+                <span class="badge <?= $badgeClass ?>"><?= $statusText ?></span>
               </td>
-              <td><?= date('d M Y H:i', strtotime($row['created_at'])) ?></td>
+              <td><?= date('d M Y, H:i', strtotime($row['created_at'])) ?></td>
+              <td><?= htmlspecialchars($row['attempting_as']) ?></td>
+              <td><?= htmlspecialchars($row['payment_amount']) ?></td>
               <td>
-                <a href="view.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-info w-100 mb-1">View</a>
-                <button data-id="<?= $row['id'] ?>" data-action="accepted" class="btn btn-sm btn-success act-btn w-100 mb-1">Accept</button>
-                <button data-id="<?= $row['id'] ?>" data-action="rejected" class="btn btn-sm btn-danger act-btn w-100">Reject</button>
+                <?php
+                $fullPath = __DIR__ . "/" . $row['file_path'];
+                if (!empty($row['file_path']) && file_exists($fullPath)):
+                ?>
+                  <a href="<?= htmlspecialchars($row['file_path']) ?>" target="_blank" class="btn btn-sm btn-primary w-100 mb-1">View</a>
+                  <a href="<?= htmlspecialchars($row['file_path']) ?>" download class="btn btn-sm btn-success w-100">Download</a>
+                <?php else: ?>
+                  <span class="text-muted">No File</span>
+                <?php endif; ?>
+              </td>
+              <td>
+                <?php
+                $reviewedBy = htmlspecialchars($row['reviewed_by']);
+                $reviewedAt = htmlspecialchars(date('d M Y, H:i', strtotime($row['reviewed_at'])));
+                echo $reviewedBy ? "$reviewedBy<br><small class='text-muted'>$reviewedAt</small>" : 'Not Reviewed';
+                ?>
+              </td>
+              <td>
+                <?php
+                $cert_fullPath = __DIR__ . "/" . $row['cert_file_path'];
+                if (!empty($row['cert_file_path']) && file_exists($cert_fullPath)):
+                ?>
+                  <a href="<?= htmlspecialchars($row['cert_file_path']) ?>" target="_blank" class="btn btn-sm btn-primary w-100 mb-1">View</a>
+                  <a href="<?= htmlspecialchars($row['cert_file_path']) ?>" download class="btn btn-sm btn-success w-100">Download</a>
+                <?php else: ?>
+                  <span class="text-muted">No File</span>
+                <?php endif; ?>
+              </td>
+              <td>
+                <a href="view?registration_number=<?= htmlspecialchars($row['registration_number']) ?>" class="btn btn-sm btn-info w-100 mb-1">Details</a>
+
+                <?php if (in_array($status, ['accepted_oral', 'accepted_poster', 'rejected'])): ?>
+                  <div class="fw-bold text-center text-<?= $status === 'rejected' ? 'danger' : 'success' ?>">
+                    <?= $statusText ?>
+                  </div>
+                <?php else: ?>
+                  <button class="btn btn-sm btn-success act-btn w-100 mb-1" data-id="<?= htmlspecialchars($row['registration_number']) ?>" data-action="accepted_oral">Accept as Oral</button>
+                  <button class="btn btn-sm btn-primary act-btn w-100 mb-1" data-id="<?= htmlspecialchars($row['registration_number']) ?>" data-action="accepted_poster">Accept as Poster</button>
+                  <button class="btn btn-sm btn-danger act-btn w-100" data-id="<?= htmlspecialchars($row['registration_number']) ?>" data-action="rejected">Reject</button>
+                <?php endif; ?>
               </td>
             </tr>
           <?php endwhile; ?>
@@ -171,48 +188,111 @@ $_SESSION['LAST_ACTIVITY'] = time();
       </table>
     </div>
 
-    <!-- Pagination UI -->
-    <nav>
-      <ul class="pagination justify-content-center">
-        <?php if ($page > 1): ?>
-          <li class="page-item"><a class="page-link" href="?page=<?= $page - 1 ?>">Previous</a></li>
-        <?php endif; ?>
 
+    <!-- Pagination -->
+    <nav>
+      <ul class="pagination justify-content-center mt-4">
+        <?php if ($page > 1): ?>
+          <li class="page-item"><a class="page-link" href="?page=<?= $page - 1 ?>&status=<?= urlencode($statusFilter) ?>&search=<?= urlencode($searchQuery) ?>">«</a></li>
+        <?php endif; ?>
         <?php for ($i = 1; $i <= $totalPages; $i++): ?>
           <li class="page-item <?= $i === $page ? 'active' : '' ?>">
-            <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+            <a class="page-link" href="?page=<?= $i ?>&status=<?= urlencode($statusFilter) ?>&search=<?= urlencode($searchQuery) ?>"><?= $i ?></a>
           </li>
         <?php endfor; ?>
-
         <?php if ($page < $totalPages): ?>
-          <li class="page-item"><a class="page-link" href="?page=<?= $page + 1 ?>">Next</a></li>
+          <li class="page-item"><a class="page-link" href="?page=<?= $page + 1 ?>&status=<?= urlencode($statusFilter) ?>&search=<?= urlencode($searchQuery) ?>">»</a></li>
         <?php endif; ?>
       </ul>
     </nav>
+
   </div>
 
   <script>
-    window.addEventListener("beforeunload", function () {
-    navigator.sendBeacon('logout.php');
-});
-    $(document).on('click', '.act-btn', function() {
-      const id = $(this).data('id');
-      const action = $(this).data('action');
-      if (!confirm('Are you sure to ' + action + ' this registration?')) return;
-      $.post('action.php', {
-        id,
-        action
-      }, function(res) {
-        if (res.status === 'ok') {
-          const badge = $('#row-' + id + ' .badge');
-          badge.removeClass('bg-secondary bg-success bg-danger')
-            .addClass(action === 'accepted' ? 'bg-success' : 'bg-danger')
-            .text(action.charAt(0).toUpperCase() + action.slice(1));
-          alert('User notified via email.');
-        } else alert(res.error || 'Failed');
-      }, 'json');
+    $(document).ready(function() {
+      // Filter change reload
+      $('#status_filter').change(function() {
+        const status = $(this).val();
+        window.location.href = `?page=1&status=${encodeURIComponent(status)}`;
+      });
+
+      // Action buttons AJAX
+      $(document).on('click', '.act-btn', function() {
+        const registration_number = $(this).data('id');
+        const action = $(this).data('action');
+        if (!confirm(`Are you sure you want to ${action.replace('_', ' ')} this registration?`)) return;
+
+        $.post('action.php', {
+          registration_number: registration_number,
+          action: action
+        }, function(res) {
+          if (res.status === 'ok') {
+            // Update status badge
+            const badge = $(`#row-${registration_number} .badge`);
+            let badgeClass = 'bg-secondary';
+            let statusText = 'Pending';
+            if (action === 'accepted_oral') {
+              badgeClass = 'bg-success';
+              statusText = 'Accepted (Oral)';
+            } else if (action === 'accepted_poster') {
+              badgeClass = 'bg-primary';
+              statusText = 'Accepted (Poster)';
+            } else if (action === 'rejected') {
+              badgeClass = 'bg-danger';
+              statusText = 'Rejected';
+            }
+            badge.removeClass('bg-secondary bg-success bg-primary bg-danger').addClass(badgeClass).text(statusText);
+
+            // Update action column
+            const actionCell = $(`#row-${registration_number} td:last`);
+            actionCell.html(`<div class="fw-bold text-center text-${action === 'rejected' ? 'danger' : 'success'}">${statusText}</div>`);
+
+            location.reload(); // Reloads the entire page to reflect updated data
+
+          } else {
+            alert('❌ ' + (res.error || 'Failed to update.'));
+          }
+        }, 'json');
+      });
+    });
+
+    // ------------------------Search Box------------------------------------
+    $('#filter_btn').on('click', function() {
+      const status = $('#status_filter').val();
+      const search = $('#search').val().trim();
+
+      // If search box is not empty, submit the search query and clear the input field.
+      if (search) {
+        const url = `?page=1&status=${encodeURIComponent(status)}&search=${encodeURIComponent(search)}`;
+        window.location.href = url; // Redirect to the search results page
+      } else {
+        // If search is empty, you may want to reload the page without a search query (optional)
+        const url = `?page=1&status=${encodeURIComponent(status)}`;
+        window.location.href = url; // Redirect to the page without the search query
+      }
+
+      // Clear the search box after search
+      $('#search').val('');
+    });
+
+    $('#search').keypress(function(e) {
+      if (e.which === 13) {
+        $('#filter_btn').click(); // Press Enter to trigger filter
+      }
     });
   </script>
+  <footer class="subfooter text-center">
+    <div class="container d-flex justify-content-between flex-column flex-md-row align-items-center">
+      <div>
+        <span>VIROCON © 2025 All Rights Reserved</span>
+      </div>
+      <div class="admin-link">
+        <a href="index">Home</a>
+      </div>
+    </div>
+  </footer>
+
+
 </body>
 
 </html>

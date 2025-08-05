@@ -1,16 +1,26 @@
 <?php
-session_start();
+// Start session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Check if admin is logged in
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
     header('Location: login.php');
-    exit;
+    exit();
 }
-// auto-logout
-$timeout = 3600;
+
+// Set timeout in seconds (30 minutes = 1800 seconds)
+$timeout = 1800;
+
+// Check if session has timed out
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $timeout) {
-    session_unset();
-    session_destroy();
-    header('Location: login.php?timeout=1');
-    exit;
+    session_unset();     // Unset $_SESSION
+    session_destroy();   // Destroy session data
+    header("Location: login.php?timeout=1");
+    exit();
 }
+
+// Update last activity time
 $_SESSION['LAST_ACTIVITY'] = time();
 ?>

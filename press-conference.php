@@ -73,7 +73,7 @@
 				<div class="content-block">
 					<h2>Register Yourself <span class="alternate">Now!</span></h2>
 					<p>Please click the button below to register for the event.</p>
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSeabvGiDc15K1h7PclRKIiBZwsGMQrv7uOSnSfkhhNF1QRVQw/viewform?usp=header" target="_blank" class="btn btn-main-md">Register</a>
+					<a href="registration.php"  class="btn btn-main-md">Register</a>
 				</div>
 			</div>
 			<div class="col-md-3 banner p-0">

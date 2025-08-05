@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   /* color: #0e08bc; */
   color: rgb(79, 205, 255);
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: 700;
 }
 
@@ -44,7 +44,7 @@ h6 {
 p, a, li, blockquote, label {
   font-size: 1rem;
   line-height: 26px;
-  color: #1175cc;
+  color: #000000;
   margin-bottom: 0;
 }
 
@@ -454,7 +454,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .btn {
-  text-transform: uppercase;
+  text-transform: none;
   font-family: "Montserrat", sans-serif;
   transition: all .3s ease;
 }
@@ -713,7 +713,7 @@ select.form-control:not([size]):not([multiple]) {
 .main-nav .ticket span {
   color: #fff;
   font-size: 1.125rem;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: "Montserrat", sans-serif;
   border-left: 1px solid #ffa366;
   padding-left: 24px;
@@ -795,7 +795,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .page-title .title h3 {
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .page-title .breadcrumb {
@@ -805,7 +805,7 @@ select.form-control:not([size]):not([multiple]) {
 .page-title .breadcrumb .breadcrumb-item {
   float: none;
   display: inline-block;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .page-title .breadcrumb .breadcrumb-item.active {
@@ -917,7 +917,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .cta-ticket .content-block h2 {
   color: #fff;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: 400;
   margin-bottom: 15px;
 }
@@ -1029,7 +1029,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .banner .block h1 {
-  text-transform: uppercase;
+  text-transform: none;
   /* font-size: 4.5rem;
   color: #2e9aff; */
   font-size: 3.5rem;
@@ -1046,7 +1046,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .banner .block h2 {
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 2.8rem;
   color: #fff;
   font-weight: 500;
@@ -1079,7 +1079,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .banner-two .block h2 {
   font-weight: 400;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 74px;
   margin-bottom: 10px;
 }
@@ -1322,7 +1322,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .schedule .schedule-tab ul li.nav-item a {
   font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 1rem;
   color: #2e9aff;
   font-weight: 500;
@@ -1455,7 +1455,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .schedule .schedule-contents .schedule-item li.headings div {
   color: #fff;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1547,7 +1547,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .schedule.two .schedule-tab ul li.nav-item a {
   font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 20px;
   color: #222222;
   font-weight: 500;
@@ -1681,7 +1681,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .schedule.two .schedule-contents .schedule-item li.headings div {
   color: #fff;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1853,7 +1853,7 @@ select.form-control:not([size]):not([multiple]) {
 .ticket-feature .block-2 .service-item h5 {
   font-family: "Helvetica", sans-serif;
   font-weight: 400;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .ticket-feature .block-2:after {
@@ -1914,7 +1914,7 @@ select.form-control:not([size]):not([multiple]) {
 .registration .service-block .service-item h5 {
   font-family: "Helvetica", sans-serif;
   font-weight: 400;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .registration .registration-block {
@@ -1960,7 +1960,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .pricing .pricing-item .pricing-heading .title h6 {
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: 400;
   line-height: 50px;
   border-bottom: 1px solid #e5e5e5;
@@ -3287,7 +3287,7 @@ ul.pagination .active a {
 }
 
 .news-hr .news-post-hr .post-contents .post-title h6 a {
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: 400;
   position: relative;
   font-size: 20px;
@@ -3345,7 +3345,7 @@ ul.pagination .active a {
 .news-hr .news-post-hr .post-contents .more a {
   font-family: "Montserrat", sans-serif;
   color: #222222;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 14px;
 }
 

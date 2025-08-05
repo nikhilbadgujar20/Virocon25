@@ -47,7 +47,7 @@
 <div class="container-fluid mt-5 pt-5">
   <div class="gear">⚙️</div>
   <h1>Under Maintenance</h1>
-  <p>We're currently working on something awesome.<br>
+  <p style="color: white";>We're currently working on something awesome.<br>
     Please check back soon!</p>
 </div>
 <?php include 'INCLUDE/footer.php' ?>

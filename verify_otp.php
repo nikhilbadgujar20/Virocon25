@@ -5,18 +5,25 @@ header('Content-Type: application/json');
 $inputOtp = $_POST['otp'] ?? '';
 $email = $_POST['email'] ?? '';
 
+// Validate OTP session exists
 if (!isset($_SESSION['otp_email'], $_SESSION['otp_code'], $_SESSION['otp_expire'])) {
-    exit(json_encode(['error' => 'No OTP session found']));
+    echo json_encode(['error' => 'No OTP session found']);
+    exit;
 }
 
+// Check expiration
 if (time() > $_SESSION['otp_expire']) {
-    exit(json_encode(['error' => 'OTP expired']));
+    echo json_encode(['error' => 'OTP expired']);
+    exit;
 }
 
+// Email match
 if ($email !== $_SESSION['otp_email']) {
-    exit(json_encode(['error' => 'Email mismatch']));
+    echo json_encode(['error' => 'Email mismatch']);
+    exit;
 }
 
+// Match OTP
 if ($inputOtp == $_SESSION['otp_code']) {
     $_SESSION['otp_verified'] = true;
     echo json_encode(['status' => 'verified']);

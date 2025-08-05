@@ -11,7 +11,7 @@
 			<div class="col-12">
 				<div class="section-title">
 					<h3>Scientific <span class="alternate">Information</span></h3>
-					<p class="lead mb-5" style="color:#1175cc">Changing Landscapes Human, Animal and Plant Viruses: Bridging Basic Science, Innovation and Public Health</p>
+					<p class="lead mb-5" style="color:black">Changing Landscapes Human, Animal and Plant Viruses: Bridging Basic Science, Innovation and Public Health</p>
 
 				</div>
 			</div>
@@ -25,7 +25,7 @@
 								Theme & Sub-themes
 							</a>
 						</li>
-						<!-- <li class="nav-item">
+						<li class="nav-item">
 					    <a class="nav-link" href="#programme" data-toggle="pill">
 							Scientific Programme
 					    </a>
@@ -34,43 +34,49 @@
 					    <a class="nav-link" href="#speakers" data-toggle="pill">
 							Key Speakers
 					    </a>
-					  </li> -->
+					  </li>
 					</ul>
 				</div>
 				<div class="schedule-contents about">
 					<div class="tab-content" id="pills-tabContent">
 						<div class="tab-pane fade show active schedule-item" id="theme">
+							<h4 class="mb-3 text-center">Theme</h4>
 							<!-- Headings -->
-							<div class="container text-center">
+							<div class="container text-Left">
 
-								<h4 class="mb-3">Theme & Sub-themes</h4>
-								<p class="lead mb-5" style="color:#1175cc">Changing Landscapes Human, Animal and Plant Viruses: Bridging Basic Science, Innovation and Public Health</p>
-								<h6>Pandemic Preparedness &amp; Response: Challenges and Solutions</h6>
+
+								<p class="lead mb-5" style="color:black">Changing Landscapes in Human, Animal and Plant Viruses: Bridging Basic Science, Innovation and Public Health</p>
+								<h4 class="mb-3 text-center">Sub-themes</h4> <hr>
+							<!-- Headings -->
+								<h6>PANDEMIC PREPAREDNESS & RESPONSE - CHALLENGES AND SOLUTIONS</h6>
 								<ul>
-									<li>Integrating Surveillance and Public Health Approaches for Managing Viral Diseases</li>
+									<li>1. One Health and Pandemic Preparedness</li>
+									<li>2. Public health and agricultural resilience</li>
+									<li>3. Innovators’ interface – Role of academia, industry, startups & future leaders</li>
+									
 
-									<li>One Health and Genomic Epidemiology for Pandemic Preparedness</li>
 								</ul>
 								<hr />
-								<h6>Countermeasures Development: Innovations for Response Needs</h6>
+								<h6>COUNTERMEASURES DEVELOPMENT - INNOVATIONS FOR RESPONSE</h6>
 								<ul>
-									<li>Harnessing Emerging Technologies for Rapid and Accurate Virus
-										diagnostics</li>
-
-									<li>Exploring Innovations in Antiviral Therapeutics</li>
-									<li>Next-Generation Viral Vaccines</li>
+									<li>1. Diagnostics</li>
+									<li>2. Vaccines</li>
+									<li>3. Therapeutics</li>
 								</ul>
-	<hr />
-	<h6>Basic Virology for reasearch and development</h6>
+								<hr />
+								<h6>BASIC VIROLOGY FOR RESEARCH AND DEVELOPMENT</h6>
 								<ul>
-									<li>Viral Pathogenesis & Host-virus interactions</li>
-
-									<li>OMICS in Viral Diseases</li>
-									<li>Bioinformatics & AI/ML in virus Reasearch</li>
+									<li>1. Virus replication, evolution and genetic diversity</li>
+									<li>2. Host-virus interactions</li>
+									<li>3. Viral Immunology</li>
 								</ul>
-	<hr />
+								<hr />
+								<p style="text-align: center;">
+                                Please <a href="images/flyer/VIROCON_2025_Themes_and_subthemes.pdf" style="color: blue;">click here</a> to download detailed Theme & Sub-themes.
+                                </p>
 							</div>
 						</div>
+						
 						<div class="tab-pane fade schedule-item" id="programme">
 							<div class="container">
 								<div class="row justify-content-center">
@@ -84,25 +90,9 @@
 											</a>
 										</div>
 									</div>
-
-									<!-- Second Card -->
-									<!--<div class="col-lg-5 col-md-6 col-sm-10 d-flex align-items-stretch mb-4">-->
-									<!--	<div class="registration-card">-->
-									<!--		<h2>Final Poster <br><span class="alternate">Schedule</span></h2>-->
-									<!--		<p>Please click the button below to download the date wise schedule.</p>-->
-									<!--		<div class="button-group">-->
-									<!--			<a href="/content/11-11-2024.pdf" download="11_Nov_Schedule.pdf" class="btn">-->
-									<!--				<h5>November 11, 2024</h5>-->
-									<!--			</a>-->
-									<!--			<a href="/content/12-11-2024.pdf" download="12_Nov_Schedule.pdf" class="btn">-->
-									<!--				<h5>November 12, 2024</h5>-->
-									<!--			</a>-->
-									<!--		</div>-->
-									<!--	</div>-->
-									<!--</div>-->
 								</div>
 							</div>
-						</div>
+                         </div>
 						<div class="tab-pane fade schedule-item" id="speakers">
 							<!-- Headings -->
 							<section class="speakers-section">
@@ -110,57 +100,16 @@
 									<h2>Our Esteemed Speakers</h2>
 									<div class="row">
 										<div class="col-md-4 speaker-info">
-											<h4>Dr. Branka Horvat </h4>
-											<p>Research Director</p>
-											<p>INSERM, Lyon, France</p>
+											<h4>vaibhav sir </h4>
+											<p>Virocon Support</p>
+											<p>NIV</p>
 										</div>
 										<div class="col-md-4 speaker-info">
-											<h4>Dr. Mikhail Pugin</h4>
-											<p>Research Director</p>
-											<p>INRAE, France</p>
+											<h4>Pamkaj Sir</h4>
+											<p>Virocon Support</p>
+											<p>NIV</p>
 										</div>
-										<div class="col-md-4 speaker-info">
-											<h4>Dr. Bapi Pahar</h4>
-											<p>Integrated Research Facility</p>
-											<p>National Institute of Allergy and Infectious Diseases (NIH), USA</p>
-										</div>
-										<div class="col-md-4 speaker-info">
-											<h4>Dr. B. V. Venkataramprasad</h4>
-											<p>Baylor College of Medicine</p>
-											<p>Texas, USA</p>
-										</div>
-										<div class="col-md-4 speaker-info">
-											<h4>Dr. Srinivas V Kaveri</h4>
-											<p>Director of Research</p>
-											<p>Centre for Scientific Research (CNRS), France</p>
-										</div>
-										<div class="col-md-4 speaker-info">
-											<h4>Dr. K. S. Venkateshwaran</h4>
-											<p>Chief Scientist</p>
-											<p>Tetracore Inc, USA</p>
-										</div>
-										<!--<div class="col-md-4 speaker-info">-->
-										<!--  <h4>Rudolph J Jaeger</h4>-->
-										<!--  <p>CSO</p>-->
-										<!--  <p>CG Technologies, USA</p>-->
-										<!--</div>-->
-										<div class="col-md-4 speaker-info">
-											<h4>Dr. Amit Gupta</h4>
-											<p>Global Business Consultant</p>
-											<p>CH Technologies, USA</p>
-										</div>
-										<div class="col-md-4 speaker-info">
-											<h4>Barry T Rouse</h4>
-											<p>Professor, College of Veterinary Medicine</p>
-											<p>University of Tennessee, Knoxville</p>
-										</div>
-										<div class="col-md-4 speaker-info">
-											<h4>Lok Shee Mei</h4>
-											<p>National University, Singapore</p>
-										</div>
-										<div class="col-md-4 speaker-info">
-											<h4>Dimitri Lavillette</h4>
-											<p>CIRI - Inserm - CNRS, Lyon, France</p>
+									
 										</div>
 									</div>
 								</div>
@@ -190,7 +139,7 @@
 				<div class="content-block">
 					<h2>Register Yourself <span class="alternate">Now!</span></h2>
 					<p>Please click the button below to register for the event.</p>
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSeabvGiDc15K1h7PclRKIiBZwsGMQrv7uOSnSfkhhNF1QRVQw/viewform?usp=header" target="_blank" class="btn btn-main-md">Register</a>
+					<a href="registration" class="btn btn-main-md">Register</a>
 				</div>
 			</div>
 			<div class="col-md-3 banner p-0">

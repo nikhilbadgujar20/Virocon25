@@ -28,17 +28,6 @@
 								IVS
 							</a>
 						</li>
-						<!-- <li class="nav-item">
-							<a class="nav-link" href="#reach" data-toggle="pill">
-								How to reach?
-							</a>
-						</li>  -->
-
-						<!-- <li class="nav-item">
-					    <a class="nav-link" href="#places" data-toggle="pill">
-							Places to see
-					    </a>
-					  </li>  -->
 					</ul>
 				</div>
 				<div class="schedule-contents">
@@ -58,12 +47,80 @@
 											<div class="image-block bg-about">
 												<img class="img-fluid border border-2 border-dark p-4 " src="images/Main Banner 2.png" alt="">
 											</div>
-											<div class="description-one mt-3 text-justify ">
-												<p>
-													The National Institute of Virology is one of the major Institutes of the Indian Council of Medical Research (ICMR). It was established at Pune, Maharashtra State in 1952 as Virus Research Centre (VRC) under the auspices of the ICMR and the Rockefeller Foundation (RF), USA. It was an outcome of the global programme of the RF for investigating the Arthropod Borne viruses. Since the studies on arboviruses and their arthropod vectors involve most of the basic principles and techniques of general virology, entomology and zoology, these viruses were also considered to be an ideal group to begin with for intensive training and research in virology in our country. The RF withdrew its support in 1967 and since then the Institute is entirely funded by the ICMR. By the 70s the Institute had developed deep scientific roots, nurtured through the sustained efforts of many dedicated workers. With the expertise in virological training and research and emphasis on self-reliance, the centre was well prepared to undertake full responsibility as a National Institute. On the recommendation of the SAC, the VRC acquired its status of national importance and was renamed as National Institute of Virology (NIV) in 1978.
-													Subsequently studies on acquired immuno deficiency Syndrome (AIDS), rotavirus gastroenteritis, acute haemorrhagic conjunctivitis, Rabies, Herpes simplex, Buffalo pox, Measles, hepatitis and Poliomyelitis were also initiated. A Microbial Containment Complex (MCC) having P-3 and P-4 biosafety levels for handling microorganisms of highly infectious nature have been established at Pashan, 11 km off the main laboratory at Pune. This laboratory provides National Containment facility for safe handling of highly hazardous pathogens. The research activities of the center were made more meaningful and viral disease based groups/divisions were created to study all aspects of that particular viral disease. High end facilities and infrastructure for Electron microscopy, immunology and computational biology studies. High throughput deep sequencing platforms have been developed to understand the molecular epidemiology of viruses circulating in the country. The institute has contributed in early detection of high consequence pathogens such as Crimean Congo hemorrhagic fever virus, Nipah virus and Zika virus in the country and containment of the outbreaks. The institute takes pride in its contribution towards development of viral vaccines against Kyasanur Forest Disease virus, Japanese Encephalitis and SARS-CoV-2 viruses and transfer of technology for public use. The institute serves as the resource centre for virus research and diagnostic laboratories (VRDL) network of department of Health research, Government of India. The research activities of the Institute are coordinated by a Scientific Advisory Committee (SAC) consisting of eminent scientists.
-												</p>
+											<div class="container my-5">
+												<h4 class="text-center mb-4">About ICMR-National Institute of Virology (ICMR-NIV)</h4>
 
+												<div class="mb-4">
+													<p class="text-justify">A premier institute under the Indian Council of Medical Research (ICMR), Department of Health Research (DHR), Ministry of Health & Family Welfare (MoHFW), Government of India. Originally established as the Virus Research Centre (VRC) in 1952.
+
+													Network & Infrastructure includes field units at Mumbai, Alappuzha and Bengaluru; zonal NIVs: Bengaluru (South), Jabalpur (Central), Dibrugarh (East), Jammu (North).</p>
+												</div>
+
+												<div class="mb-4">
+													<h5>Mandate</h5>
+
+													<p>The institute has a mandate to develop capacities and undertake research for viral diseases of
+														human public health importance.</p>
+														
+													<li>Undertaking basic virology research to understand epidemiology, pathogenesis and immune
+														mechanisms</li>
+													<li>Development of medical countermeasures, including diagnostics, vaccines and therapeutics
+														Investigation of outbreaks, diagnosis and surveillance of viral diseases</li>
+
+													
+
+												</div>
+
+												<div class="mb-4">
+													<h5>Recognitions and Affiliations</h5>
+													<p>The institute has several international and national recognitions and affiliations including</p>
+													<ol class="ms-4">
+														<li>WHO Collaborating Centre for Strengthening Capacity for Emerging Infectious
+															Diseases.</li>
+														<li>WHO H5 Reference Laboratory</li>
+														<li>WHO Coronavirus Network (CoViNet)</li>
+														<li>Global Specialized Laboratory for Polio</li>
+														<li>Regional Reference Center for Measles and Rubella</li>
+														<li>International Pathogen Surveillance Network (IPSN)</li>
+														<li>Centralized Laboratory Network (CEPI)</li>
+														<li>Animal Model Network for preclinical Research (CEPI)</li>
+														<li>Paramyxovirus Collaborative Open Research Consortium</li>
+														<li>National Influenza Centre</li>
+														<li>Resource Centre for Virus Research Diagnostic Laboratory Network</li>
+														<li>Resource Centre for Health Technology Assessment</li>
+														<li>Award: Best ICMR Institute (Health Research Excellence Summit 2024)</li>
+														<li>Academic ties: Academy of Scientific and Innovative Research, SP Pune University</li>
+													</ol>
+												</div>
+
+
+
+
+												<div class="mb-4">
+													<h5>Key Achievements (2024–2025)</h5>
+													<ol class="ms-4">
+														<li class="text-justify">Outbreak investigations for Chandipura Virus (CHPV) in Gujarat, Nipah Virus –
+															Kerala (Mobile BSL-3 deployed), Zika virus and Chikungunya virus in Pune , Mpox
+															and avian influenza in Kerala</li>
+														<li class="text-justify">Surveillance Studies for Respiratory viruses, AFP and iVDPV Surveillance in
+															Immunodeficient children, dengue, rotavirus and AMR in one health context</li>
+														<li class="text-justify">Diagnostic support for thousands of referred samples from humans and the
+															environment and supply of Kits and reagents for Dengue, Chikungunya, JE, Mpox,
+															Nipah, etc.</li>
+														<li class="text-justify">Development of new vaccine candidates: KFD virus vaccine with IIL, Hyderabad and
+															Mpox vaccine candidate with SII, Pune. In development: CHPV vaccines, JE VLP
+															vaccine, H5N1 flu vaccine</li>
+														<li class="text-justify">Publications: Total Papers: 79; Research Papers: 76; Book Chapters: 3</li>
+														<li class="text-justify">Total Impact Factor: 314.8; Average Impact Factor: 4.497</li>
+														<li class="text-justify">H-Index: 6; SJR Journal Ranking Q1 Journals: 40</li>
+														<li class="text-justify">25 MoUs signed with national and international organizations including DRDO,
+															CDRI, ICAR institutes (DFMD, NRC-P), Medical Colleges, State &amp; Central
+															Universities, CEPI</li>
+														<li class="text-justify">Patents filed for RT-LAMP assay, polio non-permissive cell line (HEK293T),
+															cloning, over expression and purification of human Club Cell 16 protein for antibody
+															production</li>
+													</ol>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -145,7 +202,7 @@
 				<div class="content-block">
 					<h2>Register Yourself <span class="alternate">Now!</span></h2>
 					<p>Please click the button below to register for the event.</p>
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSeabvGiDc15K1h7PclRKIiBZwsGMQrv7uOSnSfkhhNF1QRVQw/viewform?usp=header" target="_blank" class="btn btn-main-md">Register</a>
+					<a href="registration" class="btn btn-main-md">Register</a>
 				</div>
 			</div>
 			<div class="col-md-3 banner p-0">

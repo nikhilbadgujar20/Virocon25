@@ -55,7 +55,7 @@
 				<div class="content-block">
 					<h2>Register Yourself <span class="alternate">Now!</span></h2>
 					<p>Please click the button below to register for the event.</p>
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSfHYJUquRWsA82sgLhLhQBKPWgHjFMsmXmYB1NNu90Ao44r_g/viewform?usp=sf_link" target="_blank" class="btn btn-main-md">Register</a>
+					<a href="registration"  class="btn btn-main-md">Register</a>
 				</div>
 			</div>
 			<div class="col-md-3 banner p-0">
@@ -63,9 +63,9 @@
 				<div class="block content-block">
 					<!-- Coundown Timer -->
 					<div class="timer"></div>
+				</div>
+			</div>
 		</div>
-		</div>
-	</div>
 	</div>
 	<!-- <div class="image-block"><img src="images/inidan-woman.png" alt="" class="img-fluid"></div> -->
 </section>
@@ -76,79 +76,7 @@
 =            Footer            =
 =============================-->
 
-<footer class="footer-main">
-    <div class="container-fluid px-4">
-      <div class="row">
-
-          <!--Grid column-->
-		  <div class="col-md-4">
-			<div class="block text-center">
-			  <div class="footer-logo">
-				<img src="images/virocon-icon.png" alt="logo" class="img-fluid logo">
-			  </div>
-			  <!-- <ul class="social-links-footer list-inline">
-				<li class="list-inline-item">
-				  <a href="#"><i class="fa fa-facebook"></i></a>
-				</li>
-				<li class="list-inline-item">
-				  <a href="#"><i class="fa fa-twitter"></i></a>
-				</li>
-				<li class="list-inline-item">
-				  <a href="#"><i class="fa fa-instagram"></i></a>
-				</li>
-				<li class="list-inline-item">
-				  <a href="#"><i class="fa fa-rss"></i></a>
-				</li>
-				<li class="list-inline-item">
-				  <a href="#"><i class="fa fa-vimeo"></i></a>
-				</li>
-			  </ul> -->
-			</div>
-			
-		  </div>
-		  <div class="col-md-8">
-			<!-- Links -->
-			<h6 class="text-uppercase fw-bold text-white">Contact</h6>
-			<hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
-			<div class="row justify-content-around">
-				<div class="col-12 col-md-5 mb-4">
-					<p>Prof. Dr Yashpal Singh Malik</p>
-					<p>Secretary General, Indian Virological Society (IVS)</p>
-					<p>National Agricultural Sciences Complex</p>
-					<p>New Delhi-110012</p>
-					<p>secretary@ivs.net.in; secretaryivs@gmail.com</p>
-				</div>
-				<div class="col-12 col-md-5 mb-4">
-					<p>Dr. P. K. Dash</p>
-					<p>Organizing Secretary, VIROCON-2024</p>
-					<p>DRDE</p>
-					<p>Jhansi Road, Gwalior, IN-474002</p>
-					<p>virocon2024@yahoo.com; virocon2024@gmail.com</p>  
-				</div>
-			</div>
-		</div>
-          <!--Grid column-->
-          
-      </div>
-    </div>
-</footer>
-<!-- Subfooter -->
-<footer class="subfooter">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 align-self-center">
-        <div class="copyright-text">
-          <p><a href="#">VIROCON</a> &#169; 2024 All Right Reserved</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-		<a href="#" class="to-top"><i class="fa fa-angle-up"></i></a> 
-		<p>Powered By <span class="alternate">ClickClack</span></p>
-      </div>
-    </div>
-  </div>
-</footer>
-
+<?php include 'INCLUDE/footer.php' ?>
 
 
   <!-- JAVASCRIPTS -->
@@ -157,74 +85,7 @@
 		// Array of image file names in your 'photo_gallery' folder
 		const images = [
     'images/photo_gallery/DSC_0016.jpg',
-    'images/photo_gallery/DSC_0031.jpg',
-    'images/photo_gallery/DSC_0040.jpg',
-    'images/photo_gallery/DSC_0089.jpg',
-    'images/photo_gallery/DSC_0096.jpg',
-    'images/photo_gallery/DSC_0100.jpg',
-    'images/photo_gallery/DSC_0104.jpg',
-    'images/photo_gallery/DSC_0107.jpg',
-    'images/photo_gallery/DSC_0110.jpg',
-    'images/photo_gallery/DSC_0114.jpg',
-    'images/photo_gallery/DSC_0127.jpg',
-    'images/photo_gallery/DSC_0130.jpg',
-    'images/photo_gallery/DSC_0146.jpg',
-    'images/photo_gallery/DSC_0161.jpg',
-    'images/photo_gallery/DSC_0174.jpg',
-    'images/photo_gallery/DSC_0190.jpg',
-    'images/photo_gallery/DSC_0194.jpg',
-    'images/photo_gallery/DSC_0199.jpg',
-    'images/photo_gallery/DSC_0201.jpg',
-    'images/photo_gallery/DSC_0203.jpg',
-    'images/photo_gallery/DSC_0205.jpg',
-    'images/photo_gallery/DSC_0208.jpg',
-    'images/photo_gallery/DSC_0219.jpg',
-    'images/photo_gallery/DSC_0250.jpg',
-    'images/photo_gallery/DSC_0253.jpg',
-    'images/photo_gallery/DSC_0260.jpg',
-    'images/photo_gallery/DSC_0263.jpg',
-    'images/photo_gallery/DSC_0277.jpg',
-    'images/photo_gallery/DSC_0326.jpg',
-    'images/photo_gallery/DSC_0330.jpg',
-    'images/photo_gallery/DSC_0427.jpg',
-    'images/photo_gallery/DSC_0466.jpg',
-    'images/photo_gallery/DSC_0492.jpg',
-    'images/photo_gallery/DSC_0510.jpg',
-    'images/photo_gallery/DSC_0512.jpg',
-    'images/photo_gallery/DSC_0755.jpg',
-    'images/photo_gallery/DSC_0760.jpg',
-    'images/photo_gallery/DSC_0764.jpg',
-    'images/photo_gallery/DSC_0830.jpg',
-    'images/photo_gallery/DSC_0861%20-%20Copy.jpg',
-    'images/photo_gallery/DSC_0884.jpg',
-    'images/photo_gallery/DSC_0939.jpg',
-    'images/photo_gallery/DSC_0950.jpg',
-    'images/photo_gallery/DSC_0990.jpg',
-    'images/photo_gallery/DSC_0992.jpg',
-    'images/photo_gallery/DSC_1020.jpg',
-    'images/photo_gallery/DSC_1046.jpg',
-    'images/photo_gallery/DSC_1055.jpg',
-    'images/photo_gallery/DSC_1088.jpg',
-    'images/photo_gallery/DSC_1091.jpg',
-    'images/photo_gallery/DSC_1100.jpg',
-    'images/photo_gallery/DSC_1105.jpg',
-    'images/photo_gallery/DSC_1107.jpg',
-    'images/photo_gallery/DSC_1108.jpg',
-    'images/photo_gallery/DSC_1183.jpg',
-    'images/photo_gallery/DSC_1188.jpg',
-    'images/photo_gallery/DSC_1256.jpg',
-    'images/photo_gallery/DSC_1270.jpg',
-    'images/photo_gallery/DSC_1311.jpg',
-    'images/photo_gallery/DSC_1322.jpg',
-    'images/photo_gallery/DSC_1326.jpg',
-    'images/photo_gallery/DSC_2426.jpg',
-    'images/photo_gallery/DSC_2429.jpg',
-    'images/photo_gallery/DSC_2431.jpg',
-    'images/photo_gallery/DSC_2432.jpg',
-    'images/photo_gallery/DSC_2441.jpg',
-    'images/photo_gallery/DSC_2451.jpg',
-    'images/photo_gallery/DSC_2452.jpg',
-    'images/photo_gallery/DSC_2453.jpg'
+    'images/photo_gallery/DSC_0031.jpg'
 ];
 
 		const galleryContainer = document.getElementById('gallery-container');

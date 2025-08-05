@@ -5,12 +5,12 @@
 
 <main class="container-fluid">
     <section class="registration-info">
-        <h3>Join Us for VIROCON 2025!</h3>
-        <p style="color:black"><strong>Date:</strong> Dec 08–10, 2025 |<strong> Location:</strong> Conrad Hotel, Pune, Maharastra, India </p><br>
-        <p style="color:black"><strong>Host:</strong> ICMR-National Institude of Virology, Pune</p><br>
-        <p style="color:black"><strong>REGISTER NOW</strong> to be part of this major event for virology researchers!</p><br>
+        <h3>Join us for VIROCON 2025!</h3>
+        <p style="color:black"><strong>Date:</strong> Dec 08–10, 2025 |<strong> Location:</strong> Conrad Hotel, Pune, Maharashtra, India </p><br>
+        <p style="color:black"><strong>Host:</strong> ICMR-National Institute of Virology, Pune</p><br>
+        <p style="color:black"><strong>REGISTER NOW</strong> to be part of this major event</p><br>
         <div class="buttons">
-            <a href="register-form.php" class="btn orange">Register Now</a>
+            <a href="register-form" class="btn orange">Register Now</a>
         </div>
     </section>
 
@@ -20,9 +20,9 @@
             <thead>
                 <tr>
                     <th>Category</th>
-                    <th>Early Bird<br> <i>(Till 15th September)</i></th>
-                    <th>Standard<br> <i>(Till 15th October)</i></th>
-                    <th>Late/On-site<br> <i>(Till 05th November)</i></th>
+                    <th>Early Bird<br> <i>(till 15th September)</i></th>
+                    <th>Standard<br> <i>(till 15th October)</i></th>
+                    <th>Late/On-site<br> <i>(till 05th November)</i></th>
                 </tr>
             </thead>
             <tbody>
@@ -39,7 +39,7 @@
                     <td>10500</td>
                 </tr>
                 <tr>
-                    <td>Student/Reaserch Fellows</td>
+                    <td>Student/Research Fellows</td>
                     <td>4500</td>
                     <td>5500</td>
                     <td>6000</td>
@@ -51,7 +51,7 @@
                     <td>21500</td>
                 </tr>
                 <tr>
-                    <td>Accompaying Person <br>(no kit will be provided) </td>
+                    <td>Accompanying Person <br><br>(no kit will be provided) </td>
                     <td>4500</td>
                     <td>5500</td>
                     <td>6000</td>

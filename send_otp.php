@@ -1,22 +1,30 @@
 <?php
 session_start();
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 require 'includes/PHPMailer-master/src/PHPMailer.php';
 require 'includes/PHPMailer-master/src/SMTP.php';
 require 'includes/PHPMailer-master/src/Exception.php';
-use PHPMailer\PHPMailer\PHPMailer;
 
 header('Content-Type: application/json');
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo json_encode(['error' => 'Invalid request method.']);
+    exit;
+}
+
 $email = $_POST['email'] ?? '';
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    exit(json_encode(['error' => 'Invalid email']));
+    echo json_encode(['error' => 'Invalid email address.']);
+    exit;
 }
 
 $otp = rand(100000, 999999);
 $_SESSION['otp_email'] = $email;
 $_SESSION['otp_code'] = $otp;
-$_SESSION['otp_expire'] = time() + 600; // 10 mins
+$_SESSION['otp_expire'] = time() + 600; // 10 minutes
 
 $mail = new PHPMailer(true);
 try {
@@ -35,7 +43,6 @@ try {
 
     $mail->Body = "
         <h2>Email Verification - VIROCON 2025</h2>
-        <p>Dear <strong>{$firstName} {$lastName}</strong>,</p>
         <p>Thank you for starting your registration for <strong>VIROCON 2025</strong>.</p>
         <p>Please use the following One-Time Password (OTP) to verify your email address:</p>
         <h3 style='color: #007bff;'>$otp</h3>

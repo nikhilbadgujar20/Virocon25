@@ -1,25 +1,16 @@
-<?php // view.php
-session_start();
-if (!isset($_SESSION['admin_logged_in'])) {
-    header("Location: login.php");
-    exit();
-}
-
-$timeout = 1800; // 30 minutes
-if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY']) > $timeout) {
-    session_unset();
-    session_destroy();
-    header("Location: login.php");
-    exit();
-}
-$_SESSION['LAST_ACTIVITY'] = time();
-
-require_once 'auth.php';
+<?php
+require_once 'auth.php'; // ✅ session/auth check
 require_once 'db.php';
 
-$id = (int)($_GET['id'] ?? 0);
-$stmt = $mysqli->prepare("SELECT * FROM register WHERE id=?");
-$stmt->bind_param('i', $id);
+$id = $_GET['registration_number'] ?? '';
+if (!$id) {
+    http_response_code(400);
+    exit('Missing registration number.');
+}
+
+// Fetch single row from `register`
+$stmt = $mysqli->prepare("SELECT * FROM register WHERE registration_number = ?");
+$stmt->bind_param('s', $id);
 $stmt->execute();
 $res = $stmt->get_result();
 if (!$reg = $res->fetch_assoc()) {
@@ -30,67 +21,99 @@ if (!$reg = $res->fetch_assoc()) {
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registration #<?= $reg['id'] ?></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration #<?= $reg['registration_number'] ?></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
 <div class="container py-4">
     <a href="dashboard.php" class="btn btn-secondary mb-3">← Back</a>
     <div class="card shadow-sm">
         <div class="card-header bg-info text-white">
-            <h5 class="mb-0">Registration #<?= $reg['id'] ?></h5>
+            <h5 class="mb-0">Registration #<?= $reg['registration_number'] ?></h5>
         </div>
         <div class="card-body">
+
+            <?php if ($reg['attempting_as'] === 'Presenter'): ?>
+                <hr>
+                <h5 class="mt-4">Presentation Details</h5>
+                <dl class="row">
+                    <dt class="col-md-3">Abstract Title</dt>
+                    <dd class="col-md-9"><?= htmlspecialchars($reg['abstract_title'] ?? 'N/A') ?></dd>
+
+                    <dt class="col-md-3">Authors</dt>
+                    <dd class="col-md-9"><?= htmlspecialchars($reg['authors'] ?? 'N/A') ?></dd>
+
+                    <dt class="col-md-3">Abstract Text</dt>
+                    <dd class="col-md-9"><?= nl2br(htmlspecialchars($reg['abstract_text'] ?? '')) ?></dd>
+
+                    <dt class="col-md-3">Presentation File</dt>
+                    <dd class="col-md-9">
+                        <?php
+                        $filePath = $reg['file_path'];
+                        $fullPath = __DIR__ . '/' . $filePath;
+                        ?>
+                        <?php if (!empty($filePath) && file_exists($fullPath)): ?>
+                            <a href="<?= htmlspecialchars($filePath) ?>" target="_blank" class="btn btn-sm btn-outline-primary me-2">View File</a>
+                            <a href="<?= htmlspecialchars($filePath) ?>" download class="btn btn-sm btn-outline-success">Download</a>
+                        <?php else: ?>
+                            <span class="text-muted">Not uploaded</span>
+                        <?php endif; ?>
+                    </dd>
+                </dl>
+            <?php endif; ?>
+
+            <hr>
+            <h5>Registrant Details</h5>
             <dl class="row">
-                <dt class="col-md-3">Title</dt><dd class="col-md-9"><?= htmlspecialchars($reg['title']) ?></dd>
-                <dt class="col-md-3">Gender</dt><dd class="col-md-9"><?= htmlspecialchars($reg['gender']) ?></dd>
-                <dt class="col-md-3">First Name</dt><dd class="col-md-9"><?= htmlspecialchars($reg['first_name']) ?></dd>
-                <dt class="col-md-3">Last Name</dt><dd class="col-md-9"><?= htmlspecialchars($reg['last_name']) ?></dd>
-                <dt class="col-md-3">Organization</dt><dd class="col-md-9"><?= htmlspecialchars($reg['organization']) ?></dd>
-                <dt class="col-md-3">Delegate Type</dt><dd class="col-md-9"><?= htmlspecialchars($reg['delegate_type']) ?></dd>
-                <dt class="col-md-3">Nature of Delegate</dt><dd class="col-md-9"><?= htmlspecialchars($reg['nature_of_delegate']) ?></dd>
-                <dt class="col-md-3">Postal Address</dt><dd class="col-md-9"><?= htmlspecialchars($reg['postal_address']) ?></dd>
-                <dt class="col-md-3">City</dt><dd class="col-md-9"><?= htmlspecialchars($reg['city']) ?></dd>
-                <dt class="col-md-3">Pin Code</dt><dd class="col-md-9"><?= htmlspecialchars($reg['pin_code']) ?></dd>
-                <dt class="col-md-3">State</dt><dd class="col-md-9"><?= htmlspecialchars($reg['state']) ?></dd>
-                <dt class="col-md-3">Country</dt><dd class="col-md-9"><?= htmlspecialchars($reg['country']) ?></dd>
-                <dt class="col-md-3">Telephone No</dt><dd class="col-md-9"><?= htmlspecialchars($reg['telephone_no']) ?></dd>
-                <dt class="col-md-3">Mobile No</dt><dd class="col-md-9"><?= htmlspecialchars($reg['mobile_no']) ?></dd>
-                <dt class="col-md-3">Email</dt><dd class="col-md-9"><?= htmlspecialchars($reg['email']) ?></dd>
-                <dt class="col-md-3">No. of Accompanying Persons</dt><dd class="col-md-9"><?= $reg['no_of_accompanying_persons'] ?></dd>
-                <dt class="col-md-3">Payment Amount</dt><dd class="col-md-9">₹<?= number_format($reg['payment_amount'], 2) ?></dd>
+                <?php
+                $fields = [
+                    'Title' => 'title', 'Gender' => 'gender', 'First Name' => 'first_name',
+                    'Last Name' => 'last_name', 'Organization' => 'organization',
+                    'Delegate Type' => 'delegate_type', 'Nature of Delegate' => 'nature_of_delegate',
+                    'Postal Address' => 'postal_address', 'City' => 'city', 'Pin Code' => 'pin_code',
+                    'State' => 'state', 'Country' => 'country', 'Telephone No' => 'telephone_no',
+                    'Mobile No' => 'mobile_no', 'Email' => 'email',
+                    'No. of Accompanying Persons' => 'no_of_accompanying_persons',
+                    'Payment Amount' => 'payment_amount'
+                ];
+
+                foreach ($fields as $label => $key) {
+                    echo "<dt class='col-md-3'>{$label}</dt>";
+                    echo "<dd class='col-md-9'>" . ($key === 'payment_amount' ? '₹' . number_format($reg[$key], 2) : htmlspecialchars($reg[$key])) . "</dd>";
+                }
+                ?>
                 <dt class="col-md-3">Status</dt>
                 <dd class="col-md-9">
                     <span class="badge bg-<?= $reg['status'] === 'accepted' ? 'success' : ($reg['status'] === 'rejected' ? 'danger' : 'secondary') ?>">
                         <?= ucfirst($reg['status']) ?>
                     </span>
                 </dd>
+
                 <dt class="col-md-3">Submitted</dt>
                 <dd class="col-md-9"><?= date('d M Y, H:i', strtotime($reg['created_at'])) ?></dd>
             </dl>
+
             <div class="mt-3">
-                <a href="dashboard.php" class="btn btn-secondary">Back</a>
-                <button data-id="<?= $reg['id'] ?>" data-action="accepted" class="btn btn-success act-btn">Accept</button>
-                <button data-id="<?= $reg['id'] ?>" data-action="rejected" class="btn btn-danger act-btn">Reject</button>
+                <a href="dashboard.php" class="btn btn-sm btn-info w-30 mb-1">Back</a>
             </div>
         </div>
     </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-    window.addEventListener("beforeunload", function () {
-    navigator.sendBeacon('logout.php');
-});
     $(document).on('click', '.act-btn', function () {
         const id = $(this).data('id');
         const action = $(this).data('action');
         if (!confirm('Are you sure to ' + action + ' this registration?')) return;
-        $.post('action.php', {id, action}, function (res) {
+        $.post('action.php', { registration_number: id, action }, function (res) {
             if (res.status === 'ok') {
                 location.reload();
-            } else alert(res.error || 'Failed');
+            } else {
+                alert(res.error || 'Failed');
+            }
         }, 'json');
     });
 </script>

@@ -32,43 +32,7 @@
                 }
             ]
          });
-        // -----------------------------
-        //  Count Down JS
-        // -----------------------------
-        $('.timer').syotimer({
-            year: 2025,
-            month: 11,
-            day: 13,
-            hour: 9,
-            minute: 30
-        });
-        // -----------------------------
-        // To Top Init
-        // -----------------------------
-        $('.to-top').click(function() {
-          $('html, body').animate({ scrollTop: 0 }, 'slow');
-          return false;
-        });
-        
-        // -----------------------------
-        // Magnific Popup
-        // -----------------------------
-        $('.image-popup').magnificPopup({
-            type: 'image',
-            removalDelay: 160, //delay removal by X to allow out-animation
-            callbacks: {
-                beforeOpen: function () {
-                    // just a hack that adds mfp-anim class to markup
-                    this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-                    this.st.mainClass = this.st.el.attr('data-effect');
-                }
-            },
-            closeOnContentClick: true,
-            midClick: true,
-            fixedContentPos: false,
-            fixedBgPos: true
-
-        });
+    
         // -----------------------------
         // Mixitup
         // -----------------------------

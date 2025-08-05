@@ -1,4 +1,5 @@
 <?php include 'INCLUDE/header.php' ?>
+<link rel="stylesheet" href="css/style.css">
 
 <!--==============================
 =            Schedule            =
@@ -23,9 +24,9 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<!-- <a class="nav-link" href="#exhibition" data-toggle="pill">
+							<a class="nav-link" href="#exhibition" data-toggle="pill">
 								Exhibition
-							</a> -->
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -53,62 +54,69 @@
 									<!-- Sponsorship Table -->
 									<div class="table-responsive mt-4">
 										<table class="table table-bordered text-left table-striped">
-											<thead>
+											<thead style="background-color: skyblue;">
 												<tr>
+													<th class="align-middle text-center">S.No.</th>
 													<th class="align-middle text-center">Type</th>
 													<th class="align-middle text-center">Fee</th>
 													<th class="align-middle text-center">Package</th>
 												</tr>
 											</thead>
-											<tbody>
+											<tbody >
 												<tr>
-													<td>Platinum 1(Day1)</td>
+													<td class="text-center">1</td>
+													<td>Platinum</td>
 													<td>20 Lakhs</td>
-													<td>
-														<p>5 X 5 SFT area for display; Opportunity for 20 mins to
-															broadcast industry product usage in virology research</p>
-														<p>02 complimentary registrations in conference (kit, food &amp;
-															access to all areas.)</p>
+													<td style="color: black;">
+														
+															<li>5 X 5 SFT area for display</li>
+															<li>Opportunity for 20 mins to broadcast industry product usage in virology research</li>
+															<li>02 complimentary registrations in conference (kit, food &amp; access to all areas.)</li>
+														
 													</td>
 												</tr>
 												<tr>
-													<td>Diamond 2</td>
+													<td class="text-center">2</td>
+													<td>Diamond</td>
 													<td>15.0 Lakhs</td>
 													<td>
-														<p>5 X 5 SFT area for display; Opportunity for 15mins to
-															broadcast industry product usage in virology research</p>
-														02 complimentary registrations in conference (kit, food &amp;
-														access to all areas.)
+
+														<li>5 X 5 SFT area for display</li>
+														<li>Opportunity for 15 mins to broadcast industry product usage in virology research</li>
+														<li>02 complimentary registrations in conference (kit, food &amp; access to all areas.)</li>
+
 													</td>
 												</tr>
 												<tr>
-													<td>Gold 3</td>
+													<td class="text-center">3</td>
+													<td>Gold</td>
 													<td>10.0 Lakhs</td>
 													<td>
-														<p>5 X 5 SFT area for display; Opportunity for 10 mins to
-															broadcast industry product usage in virology research</p>
-														<p>02 complimentary registrations in conference (kit, food &amp;
-															access to all areas.)</p>
+
+														<li>5 X 5 SFT area for display </li>
+														<li>Opportunity for 10 mins to broadcast industry product usage in virology research</li>
+														<li>02 complimentary registrations in conference (kit, food &amp; access to all areas.)</li>
+
 													</td>
 												</tr>
 												<tr>
-													<td>Silver
-														10 booths</td>
+													<td class="text-center">4</td>
+													<td>Silver (10 booths)</td>
 													<td>5.0 Lakhs</td>
 													<td>
-														<p>5 X 5 SFT area for display;</p>
-														<p>01 complimentary registration in conference (kit, food &amp;
-															access to all areas.)</p>
+														<li>5 X 5 SFT area for display</li>
+														<li>01 complimentary registration in conference (kit, food &amp; access to all areas.)</li>
 													</td>
 												</tr>
 											</tbody>
 										</table>
 									</div>
+
 								</section>
 
 								<!-- Terms & Conditions Section -->
 								<section class="container mt-5">
-									<h3 class="text-center">TERMS & CONDITIONS</h3>
+									<h3 class="text-center">Terms & Conditions</h3>
 
 									<!-- Promotional Materials -->
 									<div class="mt-4">
@@ -208,7 +216,7 @@
 				<div class="content-block">
 					<h2>Register Yourself <span class="alternate">Now!</span></h2>
 					<p>Please click the button below to register for the event.</p>
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSeabvGiDc15K1h7PclRKIiBZwsGMQrv7uOSnSfkhhNF1QRVQw/viewform?usp=header" target="_blank" class="btn btn-main-md">Register</a>
+					<a href="registration"  class="btn btn-main-md">Register</a>
 				</div>
 			</div>
 			<div class="col-md-3 banner p-0">
